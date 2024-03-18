@@ -18,6 +18,17 @@
         <li>Remove missile accuracy stat and add an accuracy stat to PD: Missiles may have too many "feels bad" points tht make them not worth taking/would make them hard to balance.</li>
     </ul>
 
+    <h3><u>Term Definitions</u></h3>
+    <ul>
+        <li><u>Component</u>: A blanket term for all the Weapons and Upgrades on a ship.</li>
+        <li><u>Point Defense</u>: Specific designation on some Upgrades that communicate that they are meant to engage missiles (and possibly eventually Small Craft.)</li>
+        <li><u>System</u>: A blanket term for all Weapons and Upgrades on a ship, as well as some "built in" things including Engines, Fire Control, and the Command Bridge.</li>
+        <li><u>Thrust</u>: A ship's ability to alter it's velocity and direction.</li>
+        <li><u>Upgrade</u>: Non-offensive modules installed on a ship, a list can be found under their own section below.</li>
+        <li><u>Velocity</u>: A ship's actual current speed.</li>
+        <li><u>Weapon</u>: Any directly offensive parts of the ship that deal damage, strictly Direct Fire and Missile weapons (does not include Point Defenses).</li>
+    </ul>
+
     <h3><u>Pregame Setup</u></h3>
     <ul>
         <li>4' x 6' play area with ~7-10 Pieces of terrain. Terrain is impassable and blocks line of sight.</li>
@@ -71,9 +82,16 @@
     <ul>
         <li>Ships have a number of slots for components equal to their integrity value.</li>
         <li>Ships have a number of Integrity Rows, 6 pips each, equal to their integrity.</li>
-        <li>When a row is depleted, destroy one system on the ship.</li>
-        <li>When all rows are depleted, the ship is destroyed.</li>
-        <li>Systems: Components (weapons/upgrades), Thrusters (Half Thrust When Destroyed), Fire Control (-3 to hit with all weapons when destroyed), CiC (Fire Weapons or Apply Thrust, not both)</li>
+        <li>When a row is depleted, the ship's controller chooses one System (list below) on the ship to be destroyed.</li>
+        <li>When all rows are depleted, the ship is destroyed and removed from the field.</li>
+        <li>Systems: 
+        <ul>
+            <li>Each Component is a System. When a Component is destroyed, it's effect no longer applies if it's an upgrade, or it cannot be fired if it's a weapon.</li>
+            <li>Engines: While a ship's Engines are destroyed, this ship's thrust is reduced to half it's original value.</li>
+            <li>Fire Control: While a ship's Fire Control is destroyed, subtract 3 from the die roll when shooting direct fire weapons on this ship, and subtract 2 from the accuracy rolls when firing missile weapons from this ship.</li>
+            <li>Control Bridge: While a ship's Control Bridge is destroyed, If this ship increases or decreases velocity or changes course during the movement phase, it may not also fire weapons during the weapons phase.</li>
+        </ul>
+        </li>
     </ul>
     <h4>Corvette</h4>
     <ul>
