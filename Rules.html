@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jake's Sci-Fi Naval Warfare Game Rules</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1><u>Jake's Naval Wargame (Placeholder Name)</u></h1>
+
+    <h3><u>Planned Features</u></h3>
+    <ul>
+        <li>Small Craft (Hanger Module that holds one squadron, PD can shoot at squadrons, different types?)</li>
+        <li>Factions (Adds 3 new weapons, 3 new upgrades upgrades, one new type of small craft, and a team-wide effect, at least)</li>
+    </ul>
+
+    <h3><u>Pregame Setup/Force Construction</u></h3>
+    <ul>
+        <li><b>Forces are 20 Integrity Points worth of ships per side.</b></li>
+        <li>4' x 6' play area with ~5-7 Pieces of terrain. Terrain is impassable and blocks line of sight.</li>
+        <li><b>If a ship's path when moving would intersect a piece of terrain:</b> It immediately stops, it's thrust is reduced to zero, and it takes damage equal to the number of inches it would have moved passed the point where it stopped.</li>
+        <li>Players roll a die. The person who rolled highest places an objective marker 12" from any table edge. <b>This is the initiative roll.</b></li>
+        <li>Players alternate placing objective markers 12" from any board edge and 9" from each other until 5 are placed. </li>
+    <li>The person who won the initiative roll chooses a board edge and places all of their ships within 12" of that edge. Then the person who lost places all their ships in the same manner on the opposite side.</li>
+    <li>Play begins. <b>Ships start at 6 Thrust.</b></li>
+    </ul>
+
+    <h3><u>Winning</u></h3>
+    <ul>
+        <li>When a ship moves within 3 inches of the center of an objective marker, that marker is claimed for them.</li>
+        <li>At the end of each round (after all ships have had a chance to shoot), each player earns one point for each marker claimed by them.</li>
+        <li><b>Once a player has earned 15 points, the game ends and that player wins.</b></li>  
+    </ul>
+
+    <h3><u>Turn Structure</u></h3>
+    <ul>
+        <li>Whoever won the initiative roll goes first.</li>
+        <li>On subsequent turns, the person who went second the previous turn goes first the next turn.</li>
+        <li>Move ships according to new velocity and apply course changes (do it like Full Thrust, use the measure tool from that game.)</li>
+        <li>Once all ships have moved, starting with the player who won inititive, players alternate choosing one of their ships to fire their weapons until all ships have fired.</li>
+    </ul>
+
+    <h3><u>Movement</u></h3>
+    <ul>
+        <li>Ships have a thrust value representing their engine power.</li>
+        <li>Thrust can be spent to increase or decrease a ships velocity. (Velocity cannot be negative)</li>
+        <li>They can use up to half of their thrust to change course.</li>
+        <li>Ships move forward at the beginning of the round according to their velocity.</li>
+    </ul>
+
+    <h3><u>Direct Fire Weapons</u></h3>
+    <ul>
+        <li>Direct fire weapons fire out of the fore arc, either one of the side arcs, or the rear arc. <b>This is chosen during force creation.</b></li>
+        <li>Direct Fire Weapons require line of sight.</li>
+        <li>Direct fire weapons have a defined number of attacks. When firing this weapon, shoot it that many times. You may split those shots among any number of targets.</li>
+        <li>Direct fire weapons have a defined range. This range defines the width of the Range Bands (RB) that weapon uses. (Within that range from the ship is RB 1, from 1x that range and 2x that range is RB 2, etc). Weapons hit on 2+ in Range Band 1, and the difficulty increases by 1 for each range band (RB 2 is 3+, RB 3 is 4+, etc)</li>
+        <li>Direct fire weapons have a Damage value. Weapons deal damage based on their Damage to the target's integrity.</li>
+        <li>Direct fire weapons have an Armor Piercing value. After dealing damage to a ship, check the ship's remaining integrity. If the armor piercing value is greater than the number of integrity points left in the current row, roll a d6. On a 4+, destroy another system on the ship.</li>
+    </ul>
+    <h4>Arc Gun</h4>
+    <ul>
+        <li>Attacks: 4</li>
+        <li>Range: 2"</li>
+        <li>Damage: 3</li>
+        <li>Armor Piercing: 0</li>
+    </ul>
+    <h4>Artillery</h4>
+    <ul>
+        <li>Attacks: 1</li>
+        <li>Range: 8"</li>
+        <li>Damage: 6</li>
+        <li>Armor Piercing: 1</li>
+    </ul>
+    <h4>Autocannon</h4>
+    <ul>
+        <li>Attacks: 8</li>
+        <li>Range: 4"</li>
+        <li>Damage: 1</li>
+        <li>Armor Piercing: 0</li>
+    </ul>
+    <h4>Energy Lance (DF, 2 Atk, 6" Rng, 3 Dmg, 2 AP)</h4>
+    <ul>
+        <li>Attacks: 2</li>
+        <li>Range: 6"</li>
+        <li>Damage: 3</li>
+        <li>Armor Piercing: 2</li>
+    </ul>
+    <h4>Railgun (1 Atk, 16" Rng, 1 Dmg, 5 AP)</h4>
+    <ul>
+        <li>Attacks: 1</li>
+        <li>Range: 16"</li>
+        <li>Damage: 1</li>
+        <li>Armor Piercing: 5</li>
+    </ul>
+
+    <h3><u>Missile Weapons</u></h3>
+    <ul>
+        <li>Missile weapons can be fired in all directions.</li>
+        <li>Missile weapons do not require line of sight.</li>
+        <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles You may split those missiles among any number of targets.</li>
+        <li>Missile weapons have a defined range. Missile weapons can be fired at any targets beyond this range, and cannot be fired at targets closer.</li>
+        <li>Missiles have a defined accuracy. They hit the target on that value or higher on a d6.</li>
+        <li>Missiles have an integrity value. Sum all damage values from all point defenses on the target ship and those on other ships who's range overlaps the target's location. Assign that damage to the remaining missiles one missile at a time until all damage is assigned.</li>
+        <li>If any missiles remain, those missiles deal damage to the target according to their damage value.</li> 
+    </ul>
+    <h4>Atlas</h4>
+    <ul>
+        <li>Attacks: 5</li>
+        <li>Range: 1"</li>
+        <li>Accuracy: 4+</li>
+        <li>Integrity: 1</li>
+        <li>Damage: 1</li>
+    </ul>
+    <h4>Swarm</h4>
+    <ul>
+        <li>Attacks: 8</li>
+        <li>Range: 3"</li>
+        <li>Accuracy: 5+</li>
+        <li>Integrity: 1</li>
+        <li>Damage: 1</li>
+    </ul>
+    <h4>Torpedo</h4>
+    <ul>
+        <li>Attacks: 1</li>
+        <li>Range: 24"</li>
+        <li>Accuracy: 2+</li>
+        <li>Integrity: 3</li>
+        <li>Damage: 9</li>
+    </ul>
+    <h4>Triple Tap</h4>
+    <ul>
+        <li>Attacks: 3</li>
+        <li>Range: 12"</li>
+        <li>Accuracy: 3+</li>
+        <li>Integrity: 1</li>
+        <li>Damage: 3</li>
+    </ul>
+    <h4>Turtle</h4>
+    <ul>
+        <li>Attacks: 2</li>
+        <li>Range: 8"</li>
+        <li>Accuracy: 2+</li>
+        <li>Integrity: 4</li>
+        <li>Damage: 2</li>
+    </ul>
+
+    <h3><u>Hulls</u></h3>
+    <ul>
+        <li>Ships have a number of slots for components equal to their integrity value.</li>
+        <li>Ships have a number of Integrity Rows, 6 pips each, equal to their integrity.</li>
+        <li>When a row is depleted, destroy one system on the ship.</li>
+        <li>When all rows are depleted, the ship is destroyed.</li>
+        <li>Systems: Components (weapons/upgrades), Thrusters (Half Thrust When Destroyed), Fire Control (-3 to hit with all weapons when destroyed), CiC (Fire Weapons or Apply Thrust, not both)</li>
+    </ul>
+    <h4>Corvette</h4>
+    <ul>
+        <li>Integrity: 1</li>
+        <li>Thrust: 10</li>
+    </ul>
+    <h4>Frigate</h4>
+    <ul>
+        <li>Integrity: 2</li>
+        <li>Thrust: 8</li>
+    </ul>
+    <h4>Destroyer</h4>
+    <ul>
+        <li>Integrity: 4</li>
+        <li>Thrust: 6</li>
+    </ul>
+    <h4>Cruiser</h4>
+    <ul>
+        <li>Integrity: 6</li>
+        <li>Thrust: 4</li>
+    </ul>
+    <h4>Flagship (Battleships and Carriers)</h4>
+    <ul>
+        <li>Integrity: 8</li>
+        <li>Thrust: 2</li>
+    </ul>
+
+    <h3><u>Upgrades</u></h3>
+    <h4>Adaptive Plating</h4> 
+    <ul>
+        <li>When this ship takes damage, for each point of damage taken, roll a d6. Ignore one point of damage for each 5+ on those dice.</li>
+    </ul>
+    <h4>Cloaking System</h4> 
+    <ul>
+        <li>When the ship is being targeted with an attack from a direct fire weapon, the attacker gets -1 to the hit roll, and an additional -1 for each 8" this ship is from the attacker.</li>
+        <li>The same is true for missile accuracy rolls.</li>
+    </ul>
+    <h4>Dazzler</h4> 
+    <ul>
+        <li>Point Defense</li>
+        <li>Damage: 1d3</li>
+        <li>Range: 4"</li>
+    </ul>
+    <h4>Prophet PD</h4> 
+    <ul>
+        <li>Point Defense</li>
+        <li>Damage: 1</li>
+        <li>Range: 9"</li>
+    </ul>
+    <h4>Reinforced Armor</h4> 
+    <ul>
+        <li>Each Integrity bar for this ship has an additional 2 pips.</li>
+    </ul>
+    <h4>Repair Crews</h4> 
+    <ul>
+        <li>At the end of this ship's activation, restore d3 integrity to this ship.</li>
+        <li>If this repair fills an integrity bar, also restore one system.</li>
+    </ul>
+    <h4>Spitfire CIWS</h4> 
+    <ul>
+        <li>Point Defense</li>
+        <li>Damage: 3</li>
+        <li>Range: 1"</li>
+    </ul>
+    <h4>Thruster Overchargers</h4> 
+    <ul>
+        <li>You may increase your available thrust on an activation to up to twice it's original value.</li>
+        <li>If you do, Reduce your available thrust next activation by the amount you increased it by.</li>
+    </ul>
+    <h4>Tuned Fire Control</h4>
+    <ul>
+        <li>+1 to hit with all direct fire weapons. (Weapons fired within RB 1 are guaranteed hits)</li>
+    </ul>
+    <h4>Turret Mount</h4> 
+    <ul>
+        <li>Must be assigned to a weapon when mounted.</li>
+        <li>Allows assigned weapon to fire in the two arcs adjacent to it's firing arc, in addition to it's assigned arc</li>
+    </ul>
+  </body>
+</html>
