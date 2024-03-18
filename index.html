@@ -103,12 +103,20 @@
 
     <h3><u>Direct Fire Weapons</u></h3>
     <ul>
-        <li>Direct fire weapons fire out of the fore arc, either one of the side arcs, or the rear arc. <b>This is chosen during force creation.</b></li>
+        <li>Direct fire weapons fire out of the fore arc, the port (left) arc, the starboard (right) arc, or the rear arc.<b>This is chosen during force creation.</b></li>
+        <ul>
+            <li>The easiest way to define arcs is imagining the ship is at the center of a clock face, and thinking of the arcs in reference to the "hours" on the clock. Using the course change tool is helpful for this, it even has the arcs marked out.</li>
+            <li><u>Fore Arc</u>: Spans from between the center between 10 and 11 o'clock, to the center between 1 and 2 o'clock.</li>
+            <li><u>Port Arc</u>: Spans from between the center between 7 and 8 o'clock, to the center between 11 and 12 o'clock.</li>
+            <li><u>Starboard Arc</u>: Spans from between the center between 1 and 2 o'clock, to the center between 4 and 5 o'clock.</li>
+            <li><u>Rear Arc</u>: Spans from between the center between 7 and 8 o'clock, to the center between 4 and 5 o'clock.</li>
+        </ul>
         <li>Direct Fire Weapons require line of sight.</li>
-        <li>Direct fire weapons have a defined number of attacks. When firing this weapon, shoot it that many times. You may split those shots among any number of targets.</li>
-        <li>Direct fire weapons have a defined range. This range defines the width of the Range Bands (RB) that weapon uses. (Within that range from the ship is RB 1, from 1x that range and 2x that range is RB 2, etc). Weapons hit on 2+ in Range Band 1, and the difficulty increases by 1 for each range band (RB 2 is 3+, RB 3 is 4+, etc)</li>
-        <li>Direct fire weapons have a Damage value. Weapons deal damage based on their Damage to the target's integrity.</li>
-        <li>Direct fire weapons have an Armor Piercing value. After dealing damage to a ship, check the ship's remaining integrity. If the armor piercing value is greater than the number of integrity points left in the current row, roll a d6. On a 4+, destroy another system on the ship.</li>
+        <li>Direct fire weapons have a defined number of attacks. When firing this weapon, shoot it that many times. You may split those shots among any number of targets, chosen when activating the ship the weapon is attached to.</li>
+        <li>Direct fire weapons have a defined range. This range defines the length of the Range Bands (RB) that weapon uses. (The weapon's range is RB 1, 2x that range is RB 2, 3x that range is RB 3, etc). </li>
+        <li>Weapons hit on 2+ in Range Band 1, and the difficulty increases by 1 for each subsequent range band (RB 2 is 3+, RB 3 is 4+, etc). This means RB 5 is effectively the maximum range of a weapon, barring any modifiers</li>
+        <li>Direct fire weapons have a Damage value. Weapons deal damage based on their Damage Value to the target's integrity.</li>
+        <li>Direct fire weapons have an Armor Piercing value. After dealing damage to a ship, check the ship's remaining integrity. If the armor piercing value is greater than the number of integrity points left in the current row, roll a d6. On a 4+, the target chooses and other system on the ship to be destroyed.</li>
     </ul>
     <h4>Arc Gun</h4>
     <ul>
@@ -150,18 +158,19 @@
     <ul>
         <li>Missile weapons can be fired in all directions.</li>
         <li>Missile weapons do not require line of sight.</li>
-        <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles You may split those missiles among any number of targets.</li>
-        <li>Missile weapons have a defined range. Missile weapons can be fired at any targets beyond this range, and cannot be fired at targets closer.</li>
-        <li>Missiles have a defined accuracy. They hit the target on that value or higher on a d6.</li>
-        <li>Missiles have an integrity value. Sum all damage values from all point defenses on the target ship and those on other ships who's range overlaps the target's location. Assign that damage to the remaining missiles one missile at a time until all damage is assigned.</li>
-        <li>If any missiles remain, those missiles deal damage to the target according to their damage value.</li> 
+        <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles. You may split those missiles among any number of targets.</li>
+        <li>Missile weapons have a minimum range. They cannot be fired at any targets within this range, but can be fired at targets beyond this range.</li>
+        <li>Missiles have a defined Accuracy. They hit the target on that value or higher on a d6.</li>
+        <li>Missiles have a defined Durability value. Sum up all damage values of point defenses on the target ship and of all point defenses on other ships that the target ship is within range of. This is the PD Pool.</li>
+        <li>If there are are least a number of points in the PD Pool equal the Durability of an incoming missile, subtract that missile's durability from the PD Pool. Then that missile is considered destroyed. Repeat this process until all incoming missiles are destroyed, or the PD Pool has less points than an incoming missile's durability. </li>
+        <li>If any incoming missiles remain, those missiles deal damage to the target according to their damage value.</li> 
     </ul>
     <h4>Atlas</h4>
     <ul>
         <li>Attacks: 5</li>
         <li>Range: 1"</li>
         <li>Accuracy: 4+</li>
-        <li>Integrity: 1</li>
+        <li>Durability: 1</li>
         <li>Damage: 1</li>
     </ul>
     <h4>Swarm</h4>
@@ -169,7 +178,7 @@
         <li>Attacks: 8</li>
         <li>Range: 3"</li>
         <li>Accuracy: 5+</li>
-        <li>Integrity: 1</li>
+        <li>Durability: 1</li>
         <li>Damage: 1</li>
     </ul>
     <h4>Torpedo</h4>
@@ -177,7 +186,7 @@
         <li>Attacks: 1</li>
         <li>Range: 24"</li>
         <li>Accuracy: 2+</li>
-        <li>Integrity: 3</li>
+        <li>Durability: 3</li>
         <li>Damage: 9</li>
     </ul>
     <h4>Triple Tap</h4>
@@ -185,7 +194,7 @@
         <li>Attacks: 3</li>
         <li>Range: 12"</li>
         <li>Accuracy: 3+</li>
-        <li>Integrity: 1</li>
+        <li>Durability: 1</li>
         <li>Damage: 3</li>
     </ul>
     <h4>Turtle</h4>
@@ -193,7 +202,7 @@
         <li>Attacks: 2</li>
         <li>Range: 8"</li>
         <li>Accuracy: 2+</li>
-        <li>Integrity: 4</li>
+        <li>Durability: 4</li>
         <li>Damage: 2</li>
     </ul>
 
