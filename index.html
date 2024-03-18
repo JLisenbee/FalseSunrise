@@ -21,27 +21,35 @@
     <h3><u>Pregame Setup</u></h3>
     <ul>
         <li>4' x 6' play area with ~7-10 Pieces of terrain. Terrain is impassable and blocks line of sight.</li>
-        <li>Players roll a die. <b>This is the initiative roll.</b> The person who rolled highest places an objective marker 12" from any table edge.</li>
+        <li>Players roll a die. <b>This is the initiative roll. The player that won the initive roll has the initiative.</b></li>
+        <li>The player who has the initiative places an objective marker 12" from any table edge.</li>
         <li>Players alternate placing objective markers 12" from any board edge and 9" from each other objective until 5 are placed. </li>
-        <li>The person who won the initiative roll chooses a board edge and places all of their ships within 12" of that edge. Then the person who lost places all their ships in the same manner on the opposite edge.</li>
+        <li>The person who has the initiative chooses a board edge and places all of their ships within 12" of that edge. Then the player does not places all their ships in the same manner on the opposite edge.</li>
     <li>Play begins. <b>Ships start at 6 Thrust.</b></li>
     </ul>
 
     <h3><u>Turn Structure</u></h3>
     <ul>
-        <li>Whoever won the initiative roll goes first.</li>
-        <li>On subsequent turns, the person who went second the previous turn goes first the next turn.</li>
-        <li>Move ships according to new velocity and apply course changes (do it like Full Thrust, use the measure tool from that game.)</li>
-        <li>Once all ships have moved, starting with the player who won inititive, players alternate choosing one of their ships to fire their weapons until all ships have fired.</li>
+        <li><u>Order Phase</u>: Players secretly note their movement orders (rules for this is found in "Movement" below). Players then simultaneously reveal those orders. Since there is no ship-to-ship collision in False Sunrise, movement may be executed simultaneously.</li>
+        <li><u>Movement Phase</u>: For each ship, move it in accordance to the rules in "Movement" below. Since there is no ship-to-ship collision in False Sunrise, movement may be executed simultaneously.</li>
+        <li><u>Weapons Phase</u>: The player who has the initiative chooses one ship to fire any or all of it's weapons. Then the player who does not chooses a ship to do the same. Alternate back and forth until all ships have fired.</li>
+        <li><u>Points Phase</u>: Calculate points earned for this turn. (Refer to "Winning" below)</li>
+        <li><u>End Phase</u>: Initiative transfers to the player who did not have it at the beginning of the turn, the turn ends, and the next turn begins.</li>
     </ul>
 
     <h3><u>Movement</u></h3>
     <ul>
-        <li>Ships have a thrust value representing their engine power.</li>
-        <li>Thrust can be spent to increase or decrease a ships velocity. (Velocity cannot be negative)</li>
-        <li>They can use up to half of their thrust to change course.</li>
-        <li>Ships move forward at the beginning of the round according to their velocity.</li>
-        <li><b>If a ship's path when moving would intersect a piece of terrain:</b> It immediately stops, it's thrust is reduced to zero, and it takes damage equal to the number of inches it would have moved passed the point where it stopped.</li>
+        <li>Ships have a thrust value representing their engine power. This is not the actual distance a ship will move in a turn, but rather the "currency" they can spend to change the amount.</li>
+        <li><u>Accelerating</u>: Up to all of a ship's thrust can go towards increasing it's velocity. A ship is not required to accelerate or decelerate, and instead choose to maintain it's current velocity.</li>
+        <li><u>Changing course</u>: Up to half of a ship's thrust can be used to make course changes. Courses changes are made either to Port (left) or Starboard (right) and each point of course change changes the couyrse of the ship by one "hour" distance as if referencing a clock face (See included Tool). Course changes are always all port or all starboard, and cannot be split between the two.</li>
+        <li><u>Executing Movement</u>: Movement is carried out following the steps below.</li>
+        <ol>
+            <li>Rotate the ship a number of "hour spaces" equal to <b>half it's course change this turn, rounded down.</b></li>
+            <li>Move the ship forward a number of inches equal to <b>half it's velocity rounded up.</b></li>
+            <li>Rotate the ship a number of "hour spaces" equal to <b>half it's course change this turn, rounded up.</b></li>
+            <li>Move the ship forward a number of inches equal to <b>half it's velocity rounded down.</b></li>
+        </ol>
+        <li><b>Note: If a ship's path when moving would intersect a piece of terrain</b> it immediately stops, it's thrust is reduced to zero, and it takes damage equal to the number of inches it would have moved passed the point where it stopped (it's remaining "unallocated" velocity).</li>
     </ul>
 
     <h3><u>Winning</u></h3>
