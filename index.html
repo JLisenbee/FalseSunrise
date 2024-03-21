@@ -23,7 +23,9 @@
     <h3><u>Term Definitions</u></h3>
     <ul>
         <li><u>Component</u>: A blanket term for all the Weapons and Upgrades on a ship.</li>
+        <li><u>Fleet</u>: A player's total force, comprised of all ships controlled by them.</li>
         <li><u>Point Defense</u>: Specific designation on some Upgrades that communicate that they are meant to engage missiles (and possibly eventually Small Craft.)</li>
+        <li><u>Ship</u>: Spacefaring vessel, making up a player's fleet. Has Systems, Integrity, and Thrust, all of which are recorded on the Ship Sheet. Ship's can be represented by anything that has a clear center and a clear "forward" direction. Models/game pieces for ships do not matter, as ship's in False Sunrise are always only considered to be the centerpoints of the gamepieces used.</li>
         <li><u>System</u>: A blanket term for all Weapons and Upgrades on a ship, as well as some "built in" things including Engines, Fire Control, and the Command Bridge.</li>
         <li><u>Thrust</u>: A ship's ability to alter it's velocity and direction.</li>
         <li><u>Upgrade</u>: Non-offensive modules installed on a ship, a list can be found under their own section below.</li>
@@ -35,8 +37,8 @@
     <ul>
         <li>4' x 6' play area with ~7-10 Pieces of terrain. Terrain is impassable and blocks line of sight.</li>
         <li>Players roll a die. <b>This is the initiative roll. The player that won the initive roll has the initiative.</b></li>
-        <li>The player who has the initiative places an objective marker 12" from any table edge.</li>
-        <li>Players alternate placing objective markers 12" from any board edge and 9" from each other objective until 5 are placed. </li>
+        <li>The player who has the initiative places an objective marker anywhere on the play area 12" from any table edge and not on any terrain.</li>
+        <li>Players alternate placing objective markers in this manner, with each one also at least 9" from each other, until 5 objective markers are placed. </li>
         <li>The person who has the initiative chooses a board edge and places all of their ships within 12" of that edge. Then the player does not places all their ships in the same manner on the opposite edge.</li>
     <li>Play begins. <b>Ships start at 6 Thrust.</b></li>
     </ul>
@@ -62,13 +64,15 @@
             <li>Rotate the ship a number of "hour spaces" equal to <b>half it's course change this turn, rounded up.</b></li>
             <li>Move the ship forward a number of inches equal to <b>half it's velocity rounded down.</b></li>
         </ol>
-        <li><b>Note: If a ship's path when moving would intersect a piece of terrain</b> it immediately stops, it's thrust is reduced to zero, and it takes damage equal to the number of inches it would have moved passed the point where it stopped (it's remaining "unallocated" velocity).</li>
+        <li><b>If a ship's path when moving would intersect a piece of terrain</b> it immediately stops, then it takes damage equal to it's current velocity, then it's velocity is reduced to zero.</li>
+        <li><b>If a ship's movement would move it off the field</b> remove the ship from the board. Note the point where it left. At the end of the next turn, reset it's velocity to 6, place it anywhere within 3" of the point it left the board, and face it any heading.</li>
     </ul>
 
     <h3><u>Winning</u></h3>
     <ul>
-        <li>When a ship moves within 3 inches of the center of an objective marker, that marker is claimed for them.</li>
-        <li>At the end of each round (after all ships have had a chance to shoot), each player earns one point for each marker claimed by them.</li>
+        <li>When a ship moves within 3" of the center of an objective marker, that marker is now controlled by them.</li>
+        <li>If more than one player moved within 3" of an objective marker during a single movement phase, that point remains in the state it was in at the beginning of the turn. (It remains under the control of whoever controlled it, or remains neutral if no one controlled it.)</li>
+        <li>At the end of each round (after all ships have had a chance to shoot), each player earns one point for each marker controlled by them.</li>
         <li><b>Once a player has earned 15 points, the game ends and that player wins.</b></li>  
     </ul>
 
@@ -132,6 +136,7 @@
             <li><u>Rear Arc</u>: Spans from between the center between 7 and 8 o'clock, to the center between 4 and 5 o'clock.</li>
         </ul>
         <li>Direct Fire Weapons require line of sight.</li>
+        <li>To Fire Direct Fire weapons: Choose a weapon to fire, Choose Targets, Determine which range band the target is in, Roll to Hit, Deal Damage, Check Armor Piercing. Repeat for each Direct Fire weapon fired.</li>
         <li>Direct fire weapons have a defined number of attacks. When firing this weapon, shoot it that many times. You may split those shots among any number of targets, chosen when activating the ship the weapon is attached to.</li>
         <li>Direct fire weapons have a defined range. This range defines the length of the Range Bands (RB) that weapon uses. (The weapon's range is RB 1, 2x that range is RB 2, 3x that range is RB 3, etc). </li>
         <li>Weapons hit on 2+ in Range Band 1, and the difficulty increases by 1 for each subsequent range band (RB 2 is 3+, RB 3 is 4+, etc). This means RB 5 is effectively the maximum range of a weapon, barring any modifiers</li>
@@ -141,7 +146,7 @@
     <h4>Arc Gun</h4>
     <ul>
         <li>Attacks: 4</li>
-        <li>Range: 2"</li>
+        <li>Range: 4"</li>
         <li>Damage: 3</li>
         <li>Armor Piercing: 0</li>
     </ul>
@@ -155,7 +160,7 @@
     <h4>Autocannon</h4>
     <ul>
         <li>Attacks: 8</li>
-        <li>Range: 4"</li>
+        <li>Range: 6"</li>
         <li>Damage: 1</li>
         <li>Armor Piercing: 0</li>
     </ul>
@@ -169,7 +174,7 @@
     <h4>Railgun (1 Atk, 16" Rng, 1 Dmg, 5 AP)</h4>
     <ul>
         <li>Attacks: 1</li>
-        <li>Range: 16"</li>
+        <li>Range: 12"</li>
         <li>Damage: 1</li>
         <li>Armor Piercing: 5</li>
     </ul>
@@ -177,7 +182,8 @@
     <h3><u>Missile Weapons</u></h3>
     <ul>
         <li>Missile weapons can be fired in all directions.</li>
-        <li>Missile weapons do not require line of sight.</li>
+        <li>Missile weapons require line of sight to their target.</li>
+        <li>To Fire Missiles: Choose a missile weapon to fire, Choose Targets, Roll accuracy for each missile, Enemy Engages Point Defense, Deal Damage. Repeat for each missile weapon fired.</li>
         <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles. You may split those missiles among any number of targets.</li>
         <li>Missile weapons have a minimum range. They cannot be fired at any targets within this range, but can be fired at targets beyond this range.</li>
         <li>Missiles have a defined Accuracy. They hit the target on that value or higher on a d6.</li>
@@ -196,7 +202,7 @@
     <h4>Swarm</h4>
     <ul>
         <li>Attacks: 8</li>
-        <li>Range: 3"</li>
+        <li>Range: 6"</li>
         <li>Accuracy: 5+</li>
         <li>Durability: 1</li>
         <li>Damage: 1</li>
@@ -204,8 +210,8 @@
     <h4>Torpedo</h4>
     <ul>
         <li>Attacks: 1</li>
-        <li>Range: 24"</li>
-        <li>Accuracy: 2+</li>
+        <li>Range: 18"</li>
+        <li>Accuracy: 3+</li>
         <li>Durability: 3</li>
         <li>Damage: 9</li>
     </ul>
@@ -220,9 +226,9 @@
     <h4>Turtle</h4>
     <ul>
         <li>Attacks: 2</li>
-        <li>Range: 8"</li>
-        <li>Accuracy: 2+</li>
-        <li>Durability: 4</li>
+        <li>Range: 12"</li>
+        <li>Accuracy: 3+</li>
+        <li>Durability: 3</li>
         <li>Damage: 2</li>
     </ul>
 
@@ -233,8 +239,8 @@
     </ul>
     <h4>Cloaking System</h4> 
     <ul>
-        <li>When the ship is being targeted with an attack, the attacker gets -1 to the hit roll, and an additional -1 for each 8" this ship is from the attacker.</li>
-        <li>The same is true for missile accuracy rolls.</li>
+        <li>When this ship is being targetted by an attack from a Direct Fire weapon, the attacker gets -X to the roll when rolling to hit where X is the Range Band number this ship is in for that weapon minus 1.</li>
+        <li>When this ship is being targetted by a missile attack, this ship is counted as being 8" closer for the purposes of determing if it is in range.</li>
     </ul>
     <h4>Dazzler</h4> 
     <ul>
@@ -276,6 +282,35 @@
     <ul>
         <li>Must be assigned to a weapon when mounted.</li>
         <li>Allows assigned weapon to fire in the two arcs adjacent to it's firing arc, in addition to it's assigned arc</li>
+    </ul>
+
+    <h3><u>Changelog</u></h3>
+    <h4>March 21, 2024</h4>
+    <ul>
+        <li>Added Changelog Section</li>
+        <li>Revised Ship Sheet</li>
+        <li>Fixed Integrity Points on Ship Sheet</li>
+        <li>Added a space for Velocity on Ship Sheet</li>
+        <li>Adjusted wording for placing objective markers to be more clear</li>
+        <li>Missile Weapons now require line of sight.</li>
+        <li>Added clarifying text to explain the steps in firing Direct Fire and Missile Weapons.</li>
+        <li>Adjusted Cloaking system to scale off direct fire weapon range bands. It also decreases the distance the moubnted ship counts as being from the attacker for missile attacks.</li>
+        <li>Adjusted Weapon Ranges</li>
+        <ul>
+            <li>Arc Gun: 2" -> 4"</li>
+            <li>Autocannon: 4" -> 6"</li>
+            <li>Railgun: 16" -> 12"</li>
+        </ul>
+        <li>Changed crash damage to just be equal to your current velocity instead of remaining velocity</li>
+        <li>Missiles Adjusted</li>
+        <ul>
+            <li>Swarm: Range 3" -> 6"</li>
+            <li>Torpedo: Range 24" -> 18", Accuracy 2+ -> 3+</li>
+            <li>Turtle: Range 8" -> 12", Accuracy 2+ -> 3+, Durability 4 -> 3</li>
+        </ul>
+        <li>Added rules for if two ships moved in such a way that both would control an objective point during the movement phase.</li>
+        <li>Added rules for if a ship moves off the board during the movement phase.</li>
+        <li>Added Definitions of "Ship" and "Fleet" to the Term Definitions. Ship entry has guidelines for models/game pieces.</li>
     </ul>
   </body>
 </html>
