@@ -201,7 +201,7 @@
         <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles. You may split those missiles among any number of targets.</li>
         <li>Missile weapons have a minimum range. They cannot be fired at any targets within this range, but can be fired at targets beyond this range.</li>
         <li>Missiles have a defined Accuracy. They hit the target on that value or higher on a d6.</li>
-        <li>Missiles have a defined Durability value. Sum up all damage values of point defenses on the target ship and of all point defenses on other ships that the target ship is within range of. This is the PD Pool.</li>
+        <li>Missiles have a defined Durability value. Point Defense upgrades have an associated damage value defined by a number of die rolls. For each Point Defense upgrade who's range includes the targeted ship, roll the damage dice for each of those Point Defense upgrades and sum up the total. This is the PD Pool.</li>
         <li>If there are are least a number of points in the PD Pool equal the Durability of an incoming missile, subtract that missile's durability from the PD Pool. Then that missile is considered destroyed. Repeat this process until all incoming missiles are destroyed, or the PD Pool has less points than an incoming missile's durability. </li>
         <li>If any incoming missiles remain, those missiles deal damage to the target according to their damage value.</li> 
     </ul>
@@ -259,13 +259,13 @@
     <h4>Dazzler</h4> 
     <ul>
         <li>Point Defense</li>
-        <li>Damage: 1d3</li>
+        <li>Damage: 2d3</li>
         <li>Range: 4"</li>
     </ul>
     <h4>Prophet PD</h4> 
     <ul>
         <li>Point Defense</li>
-        <li>Damage: 1</li>
+        <li>Damage: 1d3</li>
         <li>Range: 9"</li>
     </ul>
     <h4>Reinforced Armor</h4> 
@@ -280,7 +280,7 @@
     <h4>Spitfire CIWS</h4> 
     <ul>
         <li>Point Defense</li>
-        <li>Damage: 3</li>
+        <li>Damage: 3d3</li>
         <li>Range: 1"</li>
     </ul>
     <h4>Target Acquisition Gear</h4> 
@@ -331,6 +331,11 @@
         <li>Added rules for if a ship moves off the board during the movement phase.</li>
         <li>Added Definitions of "Ship" and "Fleet" to the Term Definitions. Ship entry has guidelines for models/game pieces.</li>
         <li>Added "Target Acquisition Gear" Component.</li>
+    </ul>
+    <h4>March 23, 2024</h4>
+    <ul>
+        <li>Added Table of Contents</li>
+        <li>Reworked the Point Defense mechanic to use die rolls to calculate the PD Pool. Also readjusted existing Point Defense Systems to work with the new mechanic.</li>
     </ul>
   </body>
 </html>
