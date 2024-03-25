@@ -154,11 +154,10 @@
             <li><u>Starboard Arc</u>: Spans from between the center between 1 and 2 o'clock, to the center between 4 and 5 o'clock.</li>
             <li><u>Rear Arc</u>: Spans from between the center between 7 and 8 o'clock, to the center between 4 and 5 o'clock.</li>
         </ul>
-        <li>Direct Fire Weapons require line of sight.</li>
         <li><b>To Fire Direct Fire weapons, follow these steps in order</b>:</li>
         <ol>
             <li><u>Choose Weapons</u>: Choose any number of direct fire weapons mounted on the ship to fire.</li>
-            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose a number of targets up to the weapon's Attacks characteristic that are within the weapon's stated firing arc (or arcs in the case of a turret upgrade).</li>
+            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose a number of targets up to the weapon's Attacks characteristic that are within the weapon's stated firing arc (or arcs in the case of a turret upgrade) and within line of sight.</li>
             <li><u>Determine Range</u>: For each target, divide it's distance in inches from the attacking ship by the range characteristic of the weapon being fired and round up. The result is the Range Band that the target is within.</li>
             <li><u>Determine To-Hit value</u>: In Range Band 1, direct fire weapons hit on 2+. For each subsequent range band, the To-Hit number increases by 1. (3+ for Range Band 2, 4+ For Range Band 3, etc.)</li>
             <li><u>Roll To Hit</u>: For each weapon being fired, for each Attack, roll to see if it hits the target using the To-Hit value calculated previously.</li>
@@ -204,15 +203,18 @@
 
     <h3 id="mweapon"><u>Missile Weapons</u></h3>
     <ul>
-        <li>Missile weapons can be fired in all directions.</li>
-        <li>Missile weapons require line of sight to their target.</li>
-        <li>To Fire Missiles: Choose a missile weapon to fire, Choose Targets, Roll accuracy for each missile, Enemy Engages Point Defense, Deal Damage. Repeat for each missile weapon fired.</li>
-        <li>Missile weapons have a defined number of attacks. When firing missile weapons, fire that many missiles. You may split those missiles among any number of targets.</li>
-        <li>Missile weapons have a minimum range. They cannot be fired at any targets within this range, but can be fired at targets beyond this range.</li>
-        <li>Missiles have a defined Accuracy. They hit the target on that value or higher on a d6.</li>
-        <li>Missiles have a defined Durability value. Point Defense upgrades have an associated damage value defined by a number of die rolls. For each Point Defense upgrade who's range includes the targeted ship, roll the damage dice for each of those Point Defense upgrades and sum up the total. This is the PD Pool.</li>
-        <li>If there are are least a number of points in the PD Pool equal the Durability of an incoming missile, subtract that missile's durability from the PD Pool. Then that missile is considered destroyed. Repeat this process until all incoming missiles are destroyed, or the PD Pool has less points than an incoming missile's durability. </li>
-        <li>If any incoming missiles remain, those missiles deal damage to the target according to their damage value.</li> 
+        <li>Missiles can be fired in all directions.</li>
+        <li>Missiles have a minimum range, rather than a maximum range. They can be fired infinitely far (details in steps below).</li>
+        <li><b>To Fire Missile weapons, follow these steps in order</b>:</li>
+        <li><ol>
+            <li><u>Choose Weapons</u>: Choose any number of missile weapons mounted on the ship to fire.</li>
+            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose a number of targets up to the weapon's Attacks characteristic that are within line of sight.</li>
+            <li><u>Determine Range</u>: For each target, measure the distance to it from the attacking ship. If the target is further away from the attacking ship than the range characteristic of the weapon being fired, that target is within range.</li>
+            <li><u>Roll To Hit</u>: For each weapon being fired, for each Attack, roll to see if it hits the target using the Accuracty characteristic of the weapon being fired.</li>
+            <li><u>Calculate PD Pool</u>: If any missiles hit during the previous step, your opponent rolls all dice under the Damage characteristic for all Point Defense upgrades on the target ship, and all ships they control who have Point Defense weapons with a range that overlaps the target ship. This is the PD Pool.</li>
+            <li><u>Engage Point Defenses</u>: For each missile that would hit the target from this weapon, subtract their Durability value from the PD pool, one missile at a time, until ther are no more missiles to subtract from the pool (all missiles destroyed), or the PD Pool has insufficent points to subtract another missile (at least one missile made it through).</li>
+            <li><u>Deal damage</u>: If at least one missile made it through, those missiles deal damage to the target equal to their damage value.</li>
+        </ol></li>
     </ul>
     <h4>Atlas</h4>
     <ul>
@@ -350,7 +352,7 @@
     <ul>
         <li>Edited "Possible Changes" section to mention PD change.</li>
         <li>Added die rolls to the "term definitions" section.</li>
-        <li>Reworded direct fire weapon rules to clearer and to use more consistent language</li>
+        <li>Reworded direct fire and missile weapon rules to use clearer and more consistent language</li>
     </ul>
   </body>
 </html>
