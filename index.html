@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <style>
-  @font-face {
-    font-family: eurostile;
-    src=url (eurostile.TFF)
-  }
+    @font-face {
+        font-family: eurostile;
+        src=url (eurostile.TFF)
+    }
+    table, th, td {
+        border:1px solid;
+    }
   </style>
   <body style="font-family: eurostile, monospace">
 
@@ -133,31 +136,38 @@
             <li>Fire Control: While a ship's Fire Control is destroyed, subtract 3 from the die roll when shooting direct fire weapons on this ship, and subtract 2 from the accuracy rolls when firing missile weapons from this ship.</li>
             <li>Control Bridge: While a ship's Control Bridge is destroyed, If this ship increases or decreases velocity or changes course during the movement phase, it may not also fire weapons during the weapons phase.</li>
         </ul></li>
-        <li><h4>Corvette</h4></li>
-        <ul>
-            <li>Integrity: 1</li>
-            <li>Thrust: 10</li>
-        </ul>
-        <li><h4>Frigate</h4></li>
-        <ul>
-            <li>Integrity: 2</li>
-            <li>Thrust: 8</li>
-        </ul>
-        <li><h4>Destroyer</h4></li>
-        <ul>
-            <li>Integrity: 4</li>
-            <li>Thrust: 6</li>
-        </ul>
-        <li><h4>Cruiser</h4></li>
-        <ul>
-            <li>Integrity: 6</li>
-            <li>Thrust: 4</li>
-        </ul>
-        <li><h4>Flagship (Battleships and Carriers)</h4></li>
-        <ul>
-            <li>Integrity: 8</li>
-            <li>Thrust: 2</li>
-        </ul>
+        <table>
+            <tr>
+                <td><b>Hull Name</b></td>
+                <td><b>Integrity</b></td>
+                <td><b>Thrust</b></td>
+            </tr>
+            <tr>
+                <td>Corvette</td>
+                <td>1</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Frigate</td>
+                <td>2</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Destroyer</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Cruiser</td>
+                <td>6</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Flagship</td>
+                <td>8</td>
+                <td>2</td>
+            </tr>
+        </table>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
@@ -181,41 +191,50 @@
             <li><u>Deal damage</u>: For each Attack that hit it's target, deal an amount of damage to that target equal to the Damage value of the weapon that made the attack.</li>
             <li><u>Roll for Additional Critical Hits</u>: If the target was a ship, after applying damage, check the number of pips remaining in the target's lowest non-empty integrity bar. If the number of pips remaining is less than or equal to the Armor Piercing value of the weapon that dealt the damage, roll a d6. On a 4+, destroy an additional system on the target ship.</li>
         </ol>
-        <li><h4>Arc Gun</h4></li>
-        <ul>
-            <li>Attacks: 4</li>
-            <li>Range: 4"</li>
-            <li>Damage: 3</li>
-            <li>Armor Piercing: 0</li>
-        </ul>
-        <li><h4>Artillery</h4></li>
-        <ul>
-            <li>Attacks: 1</li>
-            <li>Range: 8"</li>
-            <li>Damage: 6</li>
-            <li>Armor Piercing: 1</li>
-        </ul>
-        <li><h4>Autocannon</h4></li>
-        <ul>
-            <li>Attacks: 8</li>
-            <li>Range: 6"</li>
-            <li>Damage: 1</li>
-            <li>Armor Piercing: 0</li>
-        </ul>
-        <li><h4>Energy Lance</h4></li>
-        <ul>
-            <li>Attacks: 2</li>
-            <li>Range: 6"</li>
-            <li>Damage: 3</li>
-            <li>Armor Piercing: 2</li>
-        </ul>
-        <li><h4>Railgun</h4></li>
-        <ul>
-            <li>Attacks: 1</li>
-            <li>Range: 12"</li>
-            <li>Damage: 1</li>
-            <li>Armor Piercing: 5</li>
-        </ul>
+        <table>
+            <tr>
+                <td><b>Weapon Name</b></td>
+                <td><b>Attacks</b></td>
+                <td><b>Range</b></td>
+                <td><b>Damage</b></td>
+                <td><b>AP</b></td>
+            </tr>
+            <tr>
+                <td>Arc Gun</td>
+                <td>4</td>
+                <td>4"</td>
+                <td>3</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Artillery</td>
+                <td>1</td>
+                <td>8"</td>
+                <td>6</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Autocannon</td>
+                <td>8</td>
+                <td>6"</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Energy Lance</td>
+                <td>2</td>
+                <td>6"</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Railgun</td>
+                <td>1</td>
+                <td>12"</td>
+                <td>1</td>
+                <td>5</td>
+            </tr>
+        </table>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
@@ -233,46 +252,56 @@
             <li><u>Engage Point Defenses</u>: For each missile that would hit the target from this weapon, subtract their Durability value from the PD pool, one missile at a time, until ther are no more missiles to subtract from the pool (all missiles destroyed), or the PD Pool has insufficent points to subtract another missile (at least one missile made it through).</li>
             <li><u>Deal damage</u>: If at least one missile made it through, those missiles deal damage to the target equal to their damage value.</li>
         </ol></li>
-        <li><h4>Bullseye</h4></li>
-        <ul>
-            <li>Attacks: 5</li>
-            <li>Range: 12"</li>
-            <li>Accuracy: 4+</li>
-            <li>Durability: 2</li>
-            <li>Damage: 2</li>
-        </ul>
-        <li><h4>Hydra</h4></li>
-        <ul>
-            <li>Attacks: 4</li>
-            <li>Range: 12"</li>
-            <li>Accuracy: 3+</li>
-            <li>Durability: 1</li>
-            <li>Damage: 3</li>
-        </ul>
-        <li><h4>Millstone</h4></li>
-        <ul>
-            <li>Attacks: 2</li>
-            <li>Range: 12"</li>
-            <li>Accuracy: 3+</li>
-            <li>Durability: 4</li>
-            <li>Damage: 2</li>
-        </ul>
-        <li><h4>Swarm</h4></li>
-        <ul>
-            <li>Attacks: 12</li>
-            <li>Range: 6"</li>
-            <li>Accuracy: 5+</li>
-            <li>Durability: 1</li>
-            <li>Damage: 1</li>
-        </ul>
-        <li><h4>Torpedo</h4></li>
-        <ul>
-            <li>Attacks: 1</li>
-            <li>Range: 18"</li>
-            <li>Accuracy: 3+</li>
-            <li>Durability: 5</li>
-            <li>Damage: 9</li>
-        </ul>
+        <table>
+            <tr>
+                <td><b>Weapon Name</b></td>
+                <td><b>Attacks</b></td>
+                <td><b>Range</b></td>
+                <td><b>Accuracy</b></td>
+                <td><b>Durability</b></td>
+                <td><b>Damage</b></td>
+            </tr>
+            <tr>
+                <td>Bullseye</td>
+                <td>5</td>
+                <td>12"</td>
+                <td>4+</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Hydra</td>
+                <td>4</td>
+                <td>12"</td>
+                <td>3+</td>
+                <td>1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Millstone</td>
+                <td>2</td>
+                <td>12"</td>
+                <td>3+</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Swarm</td>
+                <td>12</td>
+                <td>6"</td>
+                <td>5+</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Torpedo</td>
+                <td>1</td>
+                <td>18"</td>
+                <td>3+</td>
+                <td>5</td>
+                <td>9</td>
+            </tr>
+        </table>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
