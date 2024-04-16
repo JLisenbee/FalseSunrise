@@ -35,7 +35,9 @@
         <li><a href="#force">Force Construction</a></li>
         <li><a href="#hull">Ships and Hulls</a></li>
         <li><a href="#dfweapon">Direct Fire Weapons</a></li>
+        <ul><li><a href="#dftable">List of Direct Fire Weapons</a></li></ul>
         <li><a href="#mweapon">Missiles</a></li>
+        <ul><li><a href="#mtable">List of Missile Weapons</a></li></ul>
         <li><a href="#upgrades">Upgrades</a></li>
         <li><a href="#changelog">Changelog</a></li>
     </ol>
@@ -190,9 +192,9 @@
             <li><u>Determine To-Hit value</u>: In Range Band 1, direct fire weapons hit on 2+. For each subsequent range band, the To-Hit number increases by 1. (3+ for Range Band 2, 4+ For Range Band 3, etc.)</li>
             <li><u>Roll To Hit</u>: For each weapon being fired, for each Attack, roll to see if it hits the target using the To-Hit value calculated previously.</li>
             <li><u>Deal damage</u>: For each Attack that hit it's target, deal an amount of damage to that target equal to the Damage value of the weapon that made the attack.</li>
-            <li><u>Roll for Additional Critical Hits</u>: If the target was a ship, after applying damage, check the number of pips remaining in the target's lowest non-empty integrity bar. If the number of pips remaining is less than or equal to the Armor Piercing value of the weapon that dealt the damage, roll a d6. On a 4+, destroy an additional system on the target ship.</li>
+            <li><u>Roll for Additional Critical Hits</u>: If the target was a ship, after applying damage, for each attack that hit the target, check the number of pips remaining in the target's lowest non-empty integrity bar. If the number of pips remaining is less than or equal to the Armor Piercing value of the weapon that dealt the damage, roll a d6. On a 4+, destroy an additional system on the target ship.</li>
         </ol>
-        <p><table>
+        <p><table id="dftable">
             <tr>
                 <td><b>Weapon Name</b></td>
                 <td><b>Attacks</b></td>
@@ -211,7 +213,7 @@
                 <td>Artillery</td>
                 <td>1</td>
                 <td>8"</td>
-                <td>6</td>
+                <td>5</td>
                 <td>1</td>
             </tr>
             <tr>
@@ -253,7 +255,7 @@
             <li><u>Engage Point Defenses</u>: For each missile that would hit the target from this weapon, subtract their Durability value from the PD pool, one missile at a time, until ther are no more missiles to subtract from the pool (all missiles destroyed), or the PD Pool has insufficent points to subtract another missile (at least one missile made it through).</li>
             <li><u>Deal damage</u>: If at least one missile made it through, those missiles deal damage to the target equal to their damage value.</li>
         </ol></li>
-        <p><table>
+        <p><table id="mtable">
             <tr>
                 <td><b>Weapon Name</b></td>
                 <td><b>Attacks</b></td>
@@ -280,7 +282,7 @@
             </tr>
             <tr>
                 <td>Millstone</td>
-                <td>2</td>
+                <td>3</td>
                 <td>12"</td>
                 <td>3+</td>
                 <td>4</td>
@@ -300,7 +302,7 @@
                 <td>18"</td>
                 <td>3+</td>
                 <td>5</td>
-                <td>9</td>
+                <td>8</td>
             </tr>
         </table></p>
     </ul>
@@ -377,7 +379,7 @@
                 <td>Repair Crews</td>
                 <td>
                     <p>At the end of this ship's activation, restore 1d6 + 3 integrity to this ship.</p>
-                    <p>If this repair fills an integrity bar, also restore one system.</p>
+                    <p>For each integrity bar this repair fills, also restore one system.</p>
                 </td>
             </tr>
             <tr>
@@ -490,13 +492,23 @@
     <h4>April 6, 2024</h4>
     <ul>
         <li>Repair Crews: Restores 1d3 IP to -> Restores 1d6 + 3 IP</li>
-        <li>Railgun: Attacks 1 -> 3</li>
+        <li>Railgun: Attacks 1 -> 2</li>
         <li>Cloaking System: Add 8" to missile Range -> -1 to missile accuracy rolls</li>
         <li>New Component: Front-Loaded Vectoring</li>
         <li>New Component: Fragmenting Ammunition</li>
         <li>New Component: Redirected Exhaust</li>
         <li>New Component: Shields</li>
         <li>Added Velocity Sheet</li>
+    </ul>
+    <h4>April 16, 2024</h4>
+    <ul>
+        <li>Repair Crews: "If this repair fills an integrity bar," -> "For each integrity bar this repair fills,"</li>
+        <li>Railgun: Attacks 2 -> 3 (~75-87% chance to destroy a system every salvo is a big step towards making the Railgun perform it's intended job.)</li>
+        <li>Millstone: Attacks 2 -> 3 (<i>Could</i> remove one whole integrity bar in a single salvo (~30% chance of all three hitting), but probably wont. Makes Millstone worth not ignoring)</li>
+        <li>Artillery: Damage 6 -> 5 (No weapon should one shot a Corvette with no downside or without real work, forces the shooter to commit more than just one resource to one kill.)</li>
+        <li>Torpedo: Damage 9 -> 8 (Most defensive upgrades will prevent the elimination of one row, most of the time.)</li>
+        <li>Direct Fire Weapons: Step 7: Roll Additonal Crits, Added "for each attack that hit the target," (Clarifies that weapons with AP values >0 and multiple attacks should be rolling multiple times if more than one attack hits)</li>
+        <li>Added Sub-Lists for jumping to weapon tables</li>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
   </body>
