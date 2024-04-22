@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta 
+        name    = "color-scheme" 
+        content = "light dark">
+    <title>False Sunrise: Ship Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var nodeCopy = document.getElementById(data).cloneNode(true);
+            nodeCopy.id = "newId"; /* We cannot use the same ID */
+            if(ev.target.id == "section") ev.target.appendChild(nodeCopy);
+        }
+    </script>
+</head>
+
+<style>
+    @font-face {
+        font-family: eurostile;
+        src=url (eurostile.TFF)
+    }
+    table, th, td {
+        border:1px solid;
+    }
+</style>
+
+<style>
+    #section {
+        border: 2px solid grey;
+        flex: 50%;
+    }
+    .system {
+        border: 2px dotted grey;
+        margin: 1%;
+        min-height: 10%;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        height: 3000%;
+    }
+    #desc {
+        opacity: 60%;
+    }
+</style>
+
+<body style="font-family: eurostile, monospace;">
+    <!--Drag and Drop W3Schools link https://www.w3schools.com/html/html5_draganddrop.asp -->
+
+    <h1><u>False Sunrise: Ship Builder</u></h1>
+    <div class="flex-container">
+        <div id="section">
+            <p><h2><u>Weapons and Components</u></h2></p>
+
+            <div class="system" id="arcgun" draggable="true" ondragstart="drag(event)">
+                <h3><u>Arc Gun</u></h3>
+                <p id="desc">Direct Fire | Attacks 4 | Range 4"  | Damage 3 | AP 0</p>
+            </div>
+            <div class="system" id="artillery" draggable="true">
+                <h3><u>Artillery</u></h3>
+                <p id="desc">Direct Fire | Attacks 1 | Range 8"  | Damage 5 | AP 1</p>
+            </div>
+            <div class="system" id="autocannon" draggable="true">
+                <h3><u>Autocannon</u></h3>
+                <p id="desc">Direct Fire | Attacks 8 | Range 6"  | Damage 1 | AP 0</p>
+            </div>
+            <div class="system" id="energylance" draggable="true">
+                <h3><u>Energy Lance</u></h3>
+                <p id="desc">Direct Fire | Attacks 2 | Range 6"  | Damage 3 | AP 2</p>
+            </div>
+            <div class="system" id="railgun" draggable="true">
+                <h3><u>Railgun</u></h3>
+                <p id="desc">Direct Fire | Attacks 3 | Range 12" | Damage 1 | AP 5</p>
+            </div>
+            
+        </div>
+
+        <div id="section" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <input id="shipname" style="font-size: xx-large; margin: 1%;" value="Ship Name">
+
+            <div class="system" id="shipclass">
+                <h3><u>Ship Class</u></h3>
+                <label><input type="radio" name="shiptype" value="corvette"/>Corvette</label>
+                <label><input type="radio" name="shiptype" value="frigate"/>Frigate</label>
+                <label><input type="radio" name="shiptype" value="destroyer"/>Destroyer</label>
+                <label><input type="radio" name="shiptype" value="cruiser"/>Cruiser</label>
+                <label><input type="radio" name="shiptype" value="flagship"/>Flagship</label>
+            </div>
+            <div class="system" id="engines">
+                <h3><u>Engines</u></h3>
+                <p id="desc">While Destroyed: Thrust Reduced to Half</p>
+            </div>
+            <div class="system" id="firecontrol">
+                <h3><u>Fire Control</u></h3>
+                <p id="desc">While Destroyed: -3 To hit for DF Weapons, -2 Acc to Missile Weapons</p>
+            </div>
+            <div class="system" id="controlbridge">
+                <h3><u>Control Bridge</u></h3>
+                <p id="desc">While Destroyed: Can only give Thrust Orders or Shoot each turn</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
