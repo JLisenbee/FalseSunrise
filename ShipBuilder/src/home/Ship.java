@@ -3,10 +3,11 @@ import java.util.ArrayList;
 
 public class Ship {
 	
-	private int classID;
-	private ArrayList<System> systems;
+	private ShipTypes classID;
+	private String name;
+	private ArrayList<Sys> systems;
 
-	Ship(int classID) {
+	Ship(ShipTypes classID, String name) {
 		/* 
 		 * Ship Classes: 
 		 * Corvette: 	0
@@ -15,21 +16,56 @@ public class Ship {
 		 * Cruiser: 	3	
 		 * Flagship: 	4
 		 * */
-		classID = this.classID;
+		this.classID = classID;
+		this.name = name;
+				
+		systems = new ArrayList<Sys>(3);
 		
-		// Add Engines, 
-		systems = new ArrayList<System>(3);
-		systems.add(new System);
+		// Add Engines, Control Bridge, and Fire Control
+		systems.add(new Sys(SysList.ENGINES));
+		systems.add(new Sys(SysList.CONTROL_BRIDGE));
+		systems.add(new Sys(SysList.FIRE_CONTROL));
 	}
 	
-	public int getClassID() {
+	public ShipTypes getClassID() {
 		return classID;
 	}
 	
-	public boolean setClassID (int newID) {
+	public boolean setClassID(ShipTypes newID) {
 		// TODO Check for valid class change (Correct number of Systems, etc)
 		classID = newID;
 		return true;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public boolean setName(String newName) {
+		name = newName;
+		return true;
+	}
+	
+	public boolean addSystem(Sys newSystem) {
+		// TODO Check to see if there's enough room to add more
+		systems.add(newSystem);
+		
+		return true;
+	}
+	
+	public boolean removeSystem(SysList toRemove) {
+		// TODO Add Functionality
+		return true;
+	}
+	
+	public String toString() {
+		String o = "Name: " + getName() + "\n";
+		
+		for(int i = 0; i < systems.size(); i++) {
+			o = o + "- " + systems.get(i).sysID + "\n";
+		}
+		
+		return o;
 	}
 
 }
