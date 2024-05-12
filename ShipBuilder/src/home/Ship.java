@@ -1,11 +1,21 @@
 package home;
-import java.util.ArrayList;
+import java.util.Vector;
+
+enum ShipTypes {
+
+	CORVETTE,
+	FRIGATE,
+	DESTROYER,
+	CRUISER,
+	FLAGSHIP
+	
+}
 
 public class Ship {
 	
 	private ShipTypes classID;
 	private String name;
-	private ArrayList<Sys> systems;
+	private Vector<Sys> systems;
 
 	Ship(ShipTypes classID, String name) {
 		/* 
@@ -19,7 +29,7 @@ public class Ship {
 		this.classID = classID;
 		this.name = name;
 				
-		systems = new ArrayList<Sys>(3);
+		systems = new Vector<Sys>(3);
 		
 		// Add Engines, Control Bridge, and Fire Control
 		systems.add(new Sys(SysList.ENGINES));
@@ -47,15 +57,37 @@ public class Ship {
 	}
 	
 	public boolean addSystem(Sys newSystem) {
-		// TODO Check to see if there's enough room to add more
-		systems.add(newSystem);
-		
-		return true;
+		switch(getClassID()) {
+		case CORVETTE:
+			if(systems.size() < 4) systems.add(newSystem);
+			return true;
+		case FRIGATE:
+			if(systems.size() < 5) systems.add(newSystem);
+			return true;
+		case DESTROYER:
+			if(systems.size() < 7) systems.add(newSystem);
+			return true;
+		case CRUISER:
+			if(systems.size() < 9) systems.add(newSystem);
+			return true;
+		case FLAGSHIP:
+			if(systems.size() < 11) systems.add(newSystem);
+			return true;
+		default:
+			return false;
+		}
 	}
 	
 	public boolean removeSystem(SysList toRemove) {
-		// TODO Add Functionality
-		return true;
+
+		for (int i = 0; i < systems.size(); i++) {
+			if(systems.elementAt(i).sysID == toRemove) {
+				systems.remove(i);
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	public String toString() {
