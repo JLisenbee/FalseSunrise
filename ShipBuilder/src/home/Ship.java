@@ -90,8 +90,24 @@ public class Ship {
 		return false;
 	}
 	
+	// Removes all systems on teh ship except defaults
+	public boolean clean() {
+		
+		Vector<Sys> newsys = new Vector<Sys>();
+		
+		newsys.add(new Sys(SysList.ENGINES));
+		newsys.add(new Sys(SysList.CONTROL_BRIDGE));
+		newsys.add(new Sys(SysList.FIRE_CONTROL));
+		
+		systems.clear();
+		systems.addAll(newsys);
+		
+		return true;
+	}
+	
 	public String toString() {
-		String o = "Name: " + getName() + "\n";
+		String o = getName() + "\n";
+		o = o + "CLASS: " + getClassID().toString() + "\n";
 		
 		for(int i = 0; i < systems.size(); i++) {
 			o = o + "- " + systems.get(i).sysID + "\n";
