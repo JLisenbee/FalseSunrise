@@ -27,9 +27,10 @@
     <h3><a href="./8Ships.png" download="ShipSheet"><u>Ship Sheet Download Link</u></a></h3>
     <h3><a href="./MeasureTool.png" download="MeasureTool"><u>Measure Tool Download Link</u></a></h3>
     <h3><a href="./VelocityChart.png" download="VelocitySheet"><u>Velocity Sheet Download Link</u></a></h3>
-    <h3><a href="factions.html" target="_blank">*** NEW *** Factions Page</u></a></h3>
-    <p><i>For info on how to use factions, see the updates to "Force Construction" below!</i></p>
-    <p><i>For info on the factions themselves, and the equipment lists/special rules, visit the "Factions Page" link above!</i></p>
+    <h3><a href="factions.html" target="_blank">Factions Page</u></a></h3>
+    <h3><a href="smallcraft" target="_blank">*** NEW *** Small Craft Rules!</u></a></h3>
+    <p><i>For info on how to use factions, See the "Small Craft" link in the Table of Contents below, or click the link above to jump to that section!</i></p>
+    <p><i>Faction Squadrons coming soon!</i></p>
     <ol>
         <li><a href="#proposed">Proposed Features/Changes</a></li>
         <li><a href="#definitions">Term Definitions</a></li>
@@ -43,6 +44,7 @@
         <ul><li><a href="#dftable">List of Direct Fire Weapons</a></li></ul>
         <li><a href="#mweapon">Missiles</a></li>
         <ul><li><a href="#mtable">List of Missile Weapons</a></li></ul>
+        <li><a href="#smallcraft">Small Craft</a></li>
         <li><a href="#upgrades">Upgrades</a></li>
         <li><a href="#changelog">Changelog</a></li>
     </ol>
@@ -51,9 +53,10 @@
 
     <h3 id="proposed"><u>Proposed Features/Changes</u></h3>
     <ul>
-        <li>Small Craft (Hanger Module that holds one squadron, PD can shoot at squadrons, different types?)</li>
+        <li><s>Small Craft (Hanger Module that holds one squadron, PD can shoot at squadrons, different types?)</s></li>
         <li><s>Factions (Each will at least add 3 new weapons, 3 new upgrades, 1 new type of small craft, and a team-wide effect)</s> See the notes above!</li>
         <li><s>Remove missile accuracy stat and add an accuracy stat to PD: Missiles may have too many "feels bad" points tht make them not worth taking/would make them hard to balance.</s> Made Point Defenses use dice instead.</li>
+        <li>You have any cool ideas on what should be included? Message me on Discord @ stronghold258!</li>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
@@ -338,6 +341,73 @@
 
     <hr style="border-top: 1px solid; opacity: 0.3">
 
+    <h3 id="smallcraft"><u>Small Craft</u></h3>
+    <ul>
+        <li>Small Craft are small squadrons of aerospace craft, often deployed from Hanger upgrades on the larger ships.</li>
+        <li>Small Craft begin the game in Hangaer Upgrades on the main Ships. Each Hanger Upgrade by default holds One Squadron of any available. When the upgrade is added, note the type of squadron it will start off holding. (All ships may take the Fighter and Bomber squadrons below. Each faction also has a faction-specific quadron that may be available)</li>
+        <li>Small craft move, fight, and activate, very differently from the main Ships in False Sunrise. The rules on how to use them are below.</li>
+        <li><u>Parts of a Small Craft Squadron:</u> 
+        <ul>
+            <li><u>Squadron Size:</u> The Squadron Size represents how many shots from the squadron's Small Craft Weapon the squadron makes when it attacks, and also how many hits it can take. <b>Whenever a squadron takes damage, reduce it's squadron size by the damage dealt to it.</b></li>
+            <li><u>Speed:</u> The Speed of a squadron defines the distance squadron can move in a turn when activated. Squadrons do not move like normal ships. They do not receive orders during the movement phase, instead <b>when they are activated they may move up to their speed any time during that activation, following any path as long as the distance traveled does not exceed their Speed over the course of the entire activation</b></li>
+            <li><u>Small Craft Weapon:</u> The Small Craft Weapon has three parts. Accuracy vs. Small Craft, Accuracy vs. Capital Ships, and Damage. Accuracy vs. Small Craft is the result on the defines the minimum roll needed for an attack from the Small Craft Weapon. Accuracy vs. Capital Ship's is similar, but for large ships. Finally, Damage is the damage the Small Craft Weapon deals per hit.</li>
+        </ul>
+        </li>
+        <li><u>Deploying Small Craft:</u> 
+            <ul>
+                <li>For each ship with a Hangar upgrade, declare how many squadrons that ship will launch during the Order Phase. Mark those Hangar upgrades as "empty"</li>
+                <li>At each point during its movement when a ship launching small craft would apply half of its course change (beginning of its movement, and halfway through) place half of the Small Craft squadrons being deployed this turn within 2 inches of the ship's position at that point in the movement. (Round down for the first turn, round up for the second).</li>
+            </ul>
+        </li>
+        <li><u>Using Small Craft:</u> 
+            <ul>
+                <li><u>Activation:</u> Any time a player could activate a ship during the Weapons Phase, that player may instead choose to activate a Small Craft Squadron. During that activation, the player may move that squadron up to it's speed, attack with that Squadron's Small Craft Weapon, and/or take any other actions available to that Squadron (Perhaps from a Special Hangar Upgrade)</li>
+                <li><u>Making and Attack:</u> Any time during it's Activation, a Squadron may attack with it's Small Craft Weapons at any targets within 2" of the Squadron. To make the attack, roll a number fo d6's equal to the current squadron size. For each die with a result equal to or greater than the accuracy profile corresponding to the type of target being attacked, deal damage to the target equal to the damage profile of the Squadron.</li>
+                <li><ul><li>If the target is a Ship with Point Defense upgrades, those upgrades may retaliate. When the attack is declared from the Squadron, but before the rolls are made, all Point Defense upgrades on the target ship and all Point Defense upgrades on other ships who's range's include the target ship activate. Those point defenses roll their associated dice, and deal damage to the attacking squadron equal to the number rolled. Then the attack proceeds as normal using the new squadron size.</li></ul></li>
+                <li><u>Docking:</u> If a Small Craft is within 2" of a Ship with an empty Hangar upgrade during it's activation, that Squadron may to dock with that ship. Remove the Squadron from the Field, note the type of Squadron that docked on the Ship Sheet for the docking Ship. No need to note the Squadron Size as relaunched squadrons are launched at maximum Squadron Size.</li>
+                <li><u>Taking Damage:</u> If a Squadron is dealt damage, reduce it's Squadron Size by the damage dealt. A Squadron is destroyed if it's current Squadron Size is reduced to zero.</li>
+                <li><u>Being Destroyed:</u> When a Squadron is destroyed, remove it from the board.</li>
+            </ul>
+        </li>
+        <li><u>Notes on Small Craft vs. Capital Ships:</u> 
+            <ul>
+                <li>Capital Ship weapons fired at small craft follow the exact same rules as they would for firing at another Ship, but the damage characteristic is always 1.</li>
+                <li>Small Craft cannot capture objectives, or deny an opponent from capturing an objective, by being within 3" of that objective.</li>
+            </ul>
+        </li>
+
+        <p><table id="mtable">
+            <tr>
+                <td><b>Squadron Name</b></td>
+                <td><b>Squadron Size</b></td>
+                <td><b>Speed</b></td>
+                <td><b>Damage</b></td>
+                <td><b>vs. Small Craft</b></td>
+                <td><b>vs. Capital Ships</b></td>
+            </tr>
+            <tr>
+                <td>Fighter</td>
+                <td>8</td>
+                <td>12"</td>
+                <td>1</td>
+                <td>2+</td>
+                <td>6+</td>
+            </tr>
+            <tr>
+                <td>Bomber</td>
+                <td>4</td>
+                <td>8"</td>
+                <td>3</td>
+                <td>6+</td>
+                <td>2+</td>
+            </tr>
+        </table></p>
+    </ul>
+
+    <a href="#title"><u>^Jump to Top^</u></a>
+
+    <hr style="border-top: 1px solid; opacity: 0.3">
+
     <h3 id="upgrades"><u>Upgrades</u></h3>
     <ul>
         <table>
@@ -359,6 +429,12 @@
                 </td>
             </tr>
             <tr>
+                <td>Away Crews</td>
+                <td>
+                    <p>At any point during this ship's activation, to this ship or any ship within 12", restore 1d6 IP or restore one system</p>
+                </td>
+            </tr>
+            <tr>
                 <td>Cloaking System</td>
                 <td>
                     <p>When this ship is being targetted by an attack from a Direct Fire weapon, the attacker gets -X to the roll when rolling to hit where X is the Range Band number this ship is in for that weapon minus 1. (-0 at RB 1, -1 at RB 2, -2 and RB 3, etc.)</p>
@@ -374,6 +450,20 @@
                 </td>
             </tr>
             <tr>
+                <td>Fabricator</td>
+                <td>
+                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
+                    <p>When a squadron is destroyed, for each Fabricator on each ship, roll 1d6. The Fabricator with the highest result (you get to choose between ties) becomes occupied with a squadron of any type the Fabricator could have contained at the beginning of the game.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Flight Deck</td>
+                <td>
+                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
+                    <p>This Hangar Upgrade can hold two squadrons instead of just one. The squadrons need not be of the same type.</p>
+                </td>
+            </tr>
+            <tr>
                 <td>Fragmenting Ammunition</td>
                 <td>
                     <p>+1 the die roll during the "Roll for Additional Critical Hits" step for Direct Fire weapons.</p>
@@ -383,6 +473,18 @@
                 <td>Front-Loaded Vectoring</td>
                 <td>
                     <p>When applying course change, you may instead apply half of the total course change rounded up during the first instance of applying course change during movement, and apply half the total course change rounded down during the second.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Efficient Hangars</td>
+                <td>
+                    <p>All Hangar upgrades on this Ship can hold one additional Squadron.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Nanite Repair Swarm</td>
+                <td>
+                    <p>Whenever an Allied Small Craft squadron within 8" of this ship takes damage, for each point of damage taken, roll 1d6. For each result of 5+, ignore that damage.</p>
                 </td>
             </tr>
             <tr>
@@ -410,6 +512,13 @@
                 <td>
                     <p>At the end of this ship's activation, restore 1d6 + 3 integrity to this ship. For each integrity bar this repair fills, also restore one system.</p>
                     <p>Instead of resotring integrity points, you may instead choose to restore two destroyed systems.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Reserve Units</td>
+                <td>
+                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
+                    <p>Squadrons launched from this Hangar launch with 3 additional Squadron Size. (This does not increase their Starting Squadron Size value.)</p>
                 </td>
             </tr>
             <tr>
@@ -457,13 +566,16 @@
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
+
     <hr style="border-top: 1px solid; opacity: 0.3">
 
     <h3 id="changelog"><u>Changelog</u></h3>
     <h4>May 22, 2024</h4>
     <ul>
         <li>Added Measure Tool Download Link</li>
-        <li>Repair Crews: Added "Instead of resotring integrity points, you may instead choose to restore two destroyed systems" option to the rules text (System-Attacking strategies such as railgun spam need a release valve. Other upgrades may be proposed for similar adjustments)</li>
+        <li>Repair Crews: Added "Instead of restoring integrity points, you may instead choose to restore two destroyed systems" option to the rules text (System-Attacking strategies such as railgun spam need a release valve. Other upgrades may be proposed for similar adjustments)</li>
+        <li>New Upgrade: Away Crews</li>
+        <li>Small Craft Rules! New Upgrades to support this update: Efficient Hangars, Fabricator, Flight Deck, Nanite Repair Swarm, Reserve Reinforcements</li>
     </ul>
     <h4>April 22, 2024</h4>
     <ul>
