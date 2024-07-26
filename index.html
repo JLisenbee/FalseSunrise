@@ -30,9 +30,8 @@
     <h3><a href="./MeasureTool.png" download="MeasureTool"><u>Measure Tool Download Link</u></a></h3>
     <h3><a href="./VelocityChart.png" download="VelocitySheet"><u>Velocity Sheet Download Link</u></a></h3>
     <h3><a href="factions.html" target="_blank">Factions Page</u></a></h3>
-    <h3><a href="smallcraft" target="_blank">*** NEW *** Small Craft Rules!</u></a></h3>
-    <p><i>For info on how to use Small Craft, See the "Small Craft" link in the Table of Contents below, or click the link above to jump to that section! Also be sure to check the Changelog for new Upgrades!</i></p>
-    <p><i>Faction Squadrons coming soon!</i></p>
+    <p><i>False Sunrise's Combat mechanics have undergone a HUGE overhaul! I've done my best to compile the changes in the changelog below, but when doing aything with weapons or small craft, revisit the sections for those rules to make sure you're caught up on the new rules!</i></p>
+    <p><i>Unfortunately, the ship sheet is a little outdated. It's still pretty servicable, but doesn't yet have a spot for defenses. I'm aware and will be fixing it!</i></p>
     <h4><u>Table of Contents</u></h4>
     <ol>
         <li><a href="#proposed">Proposed Features/Changes</a></li>
@@ -43,11 +42,12 @@
         <li><a href="#winning">Winning</a></li>
         <li><a href="#force">Force Construction</a></li>
         <li><a href="#hull">Ships and Hulls</a></li>
-        <li><a href="#dfweapon">Direct Fire Weapons</a></li>
-        <ul><li><a href="#dftable">List of Direct Fire Weapons</a></li></ul>
-        <li><a href="#mweapon">Missiles</a></li>
-        <ul><li><a href="#mtable">List of Missile Weapons</a></li></ul>
+        <li><a href="#weapon">Weapons and Attacking</a></li>
+        <ul><li><a href="#wtable">List of Weapons</a></li></ul>
+        <li><a href="#defenses">Defenses</a></li>
+        <ul><li><a href="#dtable">List of Defenses</a></li></ul>
         <li><a href="#smallcraft">Small Craft</a></li>
+        <ul><li><a href="#mtable">Default Squadrons</a></li></ul>
         <li><a href="#upgrades">Upgrades</a></li>
         <li><a href="#changelog">Changelog</a></li>
     </ol>
@@ -59,6 +59,8 @@
         <li><s>Small Craft (Hanger Module that holds one squadron, PD can shoot at squadrons, different types?)</s></li>
         <li><s>Factions (Each will at least add 3 new weapons, 3 new upgrades, 1 new type of small craft, and a team-wide effect)</s> See the notes above!</li>
         <li><s>Remove missile accuracy stat and add an accuracy stat to PD: Missiles may have too many "feels bad" points tht make them not worth taking/would make them hard to balance.</s> Made Point Defenses use dice instead.</li>
+        <li>Seperate Upgrades into defensive, offensive, mobility, hanger, etc.</li>
+        <li>Add some more factions weapons? Lowered diversity in dials to turn for weapons has resulted in cutting down to one new weapons each.</li>
         <li>You have any cool ideas on what should be included? Message me on Discord @ stronghold258!</li>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
@@ -150,6 +152,7 @@
         <li>To see the list of the factions, the unique Faction Rules, and the unique faction Weapons and Upgrades, and some lore on each one, <a href="factions.html" target="_blank">Click This Link</a></li>
         <li><u>Choosing Hulls</u>: Ship hulls have a number of slots for components (weapons and upgrades) equal to their integrity value. Players choose the hulls they wish to use up to the agreed upon Total Integrity.</li>
         <li><u>Mounting Components</u>: For each ship hull, you choose a number of components (weapons or upgrades) from the lists below equal to the Ship hull's integrity value. Any limitations or special rules for mounting a component will be noted in the descripion of that component.</li>
+        <li><u>Mounting Defenses</u>: For each ship hull, you choose 3 defenses to mount on the hull. The effect of defenses can be found under the Ships and Hulls description.</li>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
 
@@ -202,13 +205,18 @@
             </tr>
         </table></p>
     </ul>
+
+    <ul>
+        <li>Ships also mount up to 3 Defenses. Information on Defenses can be foiund below in it's own section.</li>
+    </ul>
+
     <a href="#title"><u>^Jump to Top^</u></a>
 
     <hr style="border-top: 1px solid; opacity: 0.3">
 
-    <h3 id="dfweapon"><u>Direct Fire Weapons</u></h3>
+    <h3 id="weapon"><u>Direct Fire Weapons</u></h3>
     <ul>
-        <li>Direct fire weapons fire out of the fore arc, the port (left) arc, the starboard (right) arc, or the rear arc.<b>This is chosen during force creation.</b></li>
+        <li>With the exception of Missile weapons, weapons fire out of the fore arc, the port (left) arc, the starboard (right) arc, or the rear arc. <b>This is chosen during force creation.</b></li>
         <ul>
             <li>The easiest way to define arcs is imagining the ship is at the center of a clock face, and thinking of the arcs in reference to the "hours" on the clock. Using the course change tool is helpful for this, it even has the arcs marked out.</li>
             <li><u>Fore Arc</u>: Spans from between the center between 10 and 11 o'clock, to the center between 1 and 2 o'clock.</li>
@@ -216,58 +224,85 @@
             <li><u>Starboard Arc</u>: Spans from between the center between 1 and 2 o'clock, to the center between 4 and 5 o'clock.</li>
             <li><u>Rear Arc</u>: Spans from between the center between 7 and 8 o'clock, to the center between 4 and 5 o'clock.</li>
         </ul>
-        <li><b>To Fire Direct Fire weapons, follow these steps in order</b>:</li>
+        <li><b>To Fire weapons, follow these steps in order</b>:</li>
         <ol>
             <li><u>Choose Weapons</u>: Choose any number of direct fire weapons mounted on the ship to fire.</li>
-            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose a number of targets up to the weapon's Attacks characteristic that are within the weapon's stated firing arc (or arcs in the case of a turret upgrade) and within line of sight.</li>
-            <li><u>Determine Range</u>: For each target, divide it's distance in inches from the attacking ship by the range characteristic of the weapon being fired and round up. The result is the Range Band that the target is within.</li>
-            <li><u>Determine To-Hit value</u>: In Range Band 1, direct fire weapons hit on 2+. For each subsequent range band, the To-Hit number increases by 1. (3+ for Range Band 2, 4+ For Range Band 3, etc.)</li>
-            <li><u>Roll To Hit</u>: For each weapon being fired, for each Attack, roll to see if it hits the target using the To-Hit value calculated previously.</li>
-            <li><u>Deal damage</u>: For each Attack that hit it's target, deal an amount of damage to that target equal to the Damage value of the weapon that made the attack.</li>
-            <li><u>Roll for Additional Critical Hits</u>: If the target was a ship, after applying damage, for each attack that hit the target, check the number of pips remaining in the target's lowest non-empty integrity bar. If the number of pips remaining is less than or equal to the Armor Piercing value of the weapon that dealt the damage, roll a d6. On a 4+, destroy an additional system on the target ship.</li>
+            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose target to fire at within it's firing arc and within line of sight of the attacking ship.</li>
+            <li><u>Determine Range</u>: For each target, Determine what range band it is in. Range bands are numbered, starting from 1. Range band 1, or RB1, is defined as 0" to 6" from the attacking ship, RB2 is 6"-12", RB3 is 12"-18", etc. If a target is directly on the line between two range bands, count it as being in the closer of the two.</li>
+            <li><u>Determine Number of Attack Dice</u>: Weapons each have a defined Range characteristic, corresponding to the Range Band it is most effective in. If the target from the "Determine Range" step is in the listed band, roll 4 Attack Dice. If It is in either of the adjacent range bands, instead roll 2. Attack dice are six sided dice.</li>
+            <li><u>Apply Defenses</u>: Subtract a number of dice from the total rolled, starting with the highest dice down to the lowest, equal to the Defense Value of the target ship corresponding to the type of weapon used to attack it. An attack can only be reduced down to a minimum of one attack die (It will be the lowest one rolled). If the Defense value of the target ship happens to be negative, instead add a number of attack dice to the attack roll equal to the amount the defenses are below zero.</li>
+            <li><u>Apply Damage</u>: Total up the results of the remaining dice. Apply that damage to the Integrity of the target ship. For each Integrity Bar reduced to zero pips, destroy one component on the target ship.</li>
         </ol>
-        <p><table id="dftable">
+        <p>Each weapon type has a Unique Mechanic associated with it. They can be found below. Below that, is a list of weapons of each type.<table id="wtable">
             <tr>
-                <td><b>Weapon Name</b></td>
-                <td><b>Attacks</b></td>
+                <td><b>Weapon Type</b></td>
+                <td><b>Unique Mechanic</b></td>
+            </tr>
+            <tr>
+                <td>Energy Weapons</td>
+                <td>When attacking with Energy Weapons, roll 5 attack die instead of 4 if the target is within the stated range band of the attacking ship</td>
+            </tr>
+            <tr>
+                <td>Ballistic Weapons</td>
+                <td>When attacking with ballistic weapons, for each attack die with a result of 6, destroy one additional component on the target ship. This effect still occurs if the attack die is removed from the damage due to the defenses of the target ship.</td>
+            </tr>
+            <tr>
+                <td>Missile Weapons</td>
+                <td>Missile weapons can target any targets in any arc. They need not have a stated arc when mounted like Energy or Ballistic Weapons.</td>
+            </tr>
+        </table></p>
+        <p><table>
+            <tr>
+                <td><b>Energy Weapons</b></td>
                 <td><b>Range</b></td>
-                <td><b>Damage</b></td>
-                <td><b>AP</b></td>
             </tr>
             <tr>
                 <td>Arc Gun</td>
-                <td>4</td>
-                <td>4"</td>
-                <td>3</td>
-                <td>0</td>
+                <td>RB1</td>
             </tr>
             <tr>
-                <td>Artillery</td>
-                <td>1</td>
-                <td>8"</td>
-                <td>5</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Autocannon</td>
-                <td>8</td>
-                <td>6"</td>
-                <td>1</td>
-                <td>0</td>
+                <td>Beam Rifle</td>
+                <td>RB2</td>
             </tr>
             <tr>
                 <td>Energy Lance</td>
-                <td>2</td>
-                <td>6"</td>
-                <td>4</td>
-                <td>2</td>
+                <td>RB3</td>
+            </tr>
+        </table></p>
+        <p><table>
+            <tr>
+                <td><b>Ballistic Weapons</b></td>
+                <td><b>Range</b></td>
+            </tr>
+            <tr>
+                <td>Autocannon</td>
+                <td>RB2</td>
+            </tr>
+            <tr>
+                <td>Artillery</td>
+                <td>RB3</td>
             </tr>
             <tr>
                 <td>Railgun</td>
-                <td>3</td>
-                <td>12"</td>
-                <td>1</td>
-                <td>5</td>
+                <td>RB4</td>
+            </tr>
+        </table></p>
+        <p><table>
+            <tr>
+                <td><b>Missile Weapons</b></td>
+                <td><b>Range</b></td>
+            </tr>
+            <tr>
+                <td>Hydra</td>
+                <td>RB3</td>
+            </tr>
+            <tr>
+                <td>Bullseye</td>
+                <td>RB4</td>
+            </tr>
+            <tr>
+                <td>Torpedo</td>
+                <td>RB5</td>
             </tr>
         </table></p>
     </ul>
@@ -275,68 +310,35 @@
 
     <hr style="border-top: 1px solid; opacity: 0.3">
 
-    <h3 id="mweapon"><u>Missile Weapons</u></h3>
+    <h3 id="defenses"><u>Defenses</u></h3>
     <ul>
-        <li>Missiles can be fired in all directions.</li>
-        <li>Missiles have a minimum range, rather than a maximum range. They can be fired infinitely far (details in steps below).</li>
-        <li><b>To Fire Missile weapons, follow these steps in order</b>:</li>
-        <li><ol>
-            <li><u>Choose Weapons</u>: Choose any number of missile weapons mounted on the ship to fire.</li>
-            <li><u>Declare Targets</u>: For each weapon chosen to fire, choose a number of targets up to the weapon's Attacks characteristic that are within line of sight.</li>
-            <li><u>Determine Range</u>: For each target, measure the distance to it from the attacking ship. If the target is further away from the attacking ship than the range characteristic of the weapon being fired, that target is within range.</li>
-            <li><u>Roll To Hit</u>: For each weapon being fired, for each Attack, roll to see if it hits the target using the Accuracty characteristic of the weapon being fired.</li>
-            <li><u>Calculate PD Pool</u>: If any missiles hit during the previous step, your opponent rolls all dice under the Damage characteristic for all Point Defense upgrades on the target ship, and all ships they control who have Point Defense weapons with a range that overlaps the target ship. This is the PD Pool.</li>
-            <li><u>Engage Point Defenses</u>: For each missile that would hit the target from this weapon, subtract their Durability value from the PD pool, one missile at a time, until ther are no more missiles to subtract from the pool (all missiles destroyed), or the PD Pool has insufficent points to subtract another missile (at least one missile made it through).</li>
-            <li><u>Deal damage</u>: If at least one missile made it through, those missiles deal damage to the target equal to their damage value.</li>
-        </ol></li>
-        <p><table id="mtable">
+        <li>In additon to weapons and upgrades, ships can also mount up to 3 Defenses. Defenses do not take up any Component slots available to a ship.</li>
+        <li>Each defense has a weapon type they are effective at stopping.</li>
+        <li>Each defense increases the Defense Rating of the mounted ship against that defenses weapon type by 1.</li>
+        <li>When a ship is attacked, it ignores the damage from the X highest attack dice from that attack where X is the defenses value of the ship corresponding to the weapon type of the attacking weapon, down to a minimum of 1 die.</li>
+        <li>If the defense value for the attacking weapon type is negative on the target ship, the attacker adds that many attack dice to their attack.</li>
+        <li>The exception to this is Point Defenses. For each Point Defenses defense on a ship, make an attack against any enemy squadron assigned to the mounted ship at the beginning of the mounted ship's activation.</li>
+        <li>The List of Defenses can be found below:</li>
+        <p><table id="dtable">
             <tr>
-                <td><b>Weapon Name</b></td>
-                <td><b>Attacks</b></td>
-                <td><b>Range</b></td>
-                <td><b>Accuracy</b></td>
-                <td><b>Durability</b></td>
-                <td><b>Damage</b></td>
+                <td><b>Defense Name</b></td>
+                <td><b>Effect</b></td>
             </tr>
             <tr>
-                <td>Bullseye</td>
-                <td>5</td>
-                <td>12"</td>
-                <td>4+</td>
-                <td>2</td>
-                <td>2</td>
+                <td>Refractive Coating</td>
+                <td>Increase defenses against <b>Energy</b> weapons by 1.</td>
             </tr>
             <tr>
-                <td>Hydra</td>
-                <td>4</td>
-                <td>12"</td>
-                <td>3+</td>
-                <td>1</td>
-                <td>3</td>
+                <td>Hardened Armor</td>
+                <td>Increase defenses against <b>Ballistic</b> weapons by 1.</td>
             </tr>
             <tr>
-                <td>Millstone</td>
-                <td>3</td>
-                <td>12"</td>
-                <td>3+</td>
-                <td>4</td>
-                <td>2</td>
+                <td>Interceptor Missiles</td>
+                <td>Increase defenses against <b>Missile</b> weapons by 1.</td>
             </tr>
             <tr>
-                <td>Swarm</td>
-                <td>12</td>
-                <td>6"</td>
-                <td>5+</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Torpedo</td>
-                <td>1</td>
-                <td>18"</td>
-                <td>3+</td>
-                <td>5</td>
-                <td>8</td>
+                <td>Point Defenses</td>
+                <td>For each Point Defenses defense on a ship, make an attack against any enemy squadron assigned to the mounted ship at the beginning of the mounted ship's activation.</td>
             </tr>
         </table></p>
     </ul>
@@ -346,36 +348,39 @@
 
     <h3 id="smallcraft"><u>Small Craft</u></h3>
     <ul>
-        <li>Small Craft are small squadrons of aerospace craft, often deployed from Hanger upgrades on the larger ships.</li>
-        <li>Small Craft begin the game in Hangar Upgrades on the main Ships. Each Hanger Upgrade by default holds One Squadron of any available. When the upgrade is added, note the type of squadron it will start off holding. (All ships may take the Fighter and Bomber squadrons below. Each faction also has a faction-specific quadron that may be available)</li>
-        <li>Small craft move, fight, and activate, very differently from the main Ships in False Sunrise. The rules on how to use them are below.</li>
+        <li>Small Craft are small squadrons of aerospace craft, deployed from Hanger upgrades on the larger ships.</li>
+        <li>Small Craft begin the game in Hangar Upgrades on the main Ships. Each Hanger Upgrade by default holds One Squadron of any available. When the upgrade is added during force creation, note the type of squadron it will start off holding. (All ships may take the Fighter and Bomber squadrons below. Each faction also has a faction-specific squadron that may be available)</li>
+        <li>Small Craft work very differently from the main Ships in False Sunrise. The rules on how to use them are below.</li>
         <li><u>Parts of a Small Craft Squadron:</u> 
         <ul>
-            <li><u>Squadron Size:</u> The Squadron Size represents how many shots from the squadron's Small Craft Weapon the squadron makes when it attacks, and also how many hits it can take. <b>Whenever a squadron takes damage, reduce it's squadron size by the damage dealt to it.</b></li>
-            <li><u>Speed:</u> The Speed of a squadron defines the distance squadron can move in a turn when activated. Squadrons do not move like normal ships. They do not receive orders during the movement phase, instead <b>when they are activated they may move up to their speed any time during that activation, following any path as long as the distance traveled does not exceed their Speed over the course of the entire activation</b></li>
-            <li><u>Small Craft Weapon:</u> The Small Craft Weapon has three parts. Accuracy vs. Small Craft, Accuracy vs. Capital Ships, and Damage. Accuracy vs. Small Craft is the result on the defines the minimum roll needed for an attack from the Small Craft Weapon. Accuracy vs. Capital Ship's is similar, but for large ships. Finally, Damage is the damage the Small Craft Weapon deals per hit.</li>
+            <li><u>Squadron Size:</u> Squadron Size describes how many craft are in each group. <b>When squadron size is depleted, the squadron is destroyed.</b></li>
+            <li><u>Toughness:</u> The toughness describes each individual Craft's ability to evade or resist various defenses against them.</li>
+            <li><u>Effect Ladder:</u> The effect ladder describes the effect the squadron has when on offense while it is in each of three states: Greater than 2/3 squadron size (rounded up), 2/3 squadron size (rounded down) to 1/3 Squadron size (rounded up), and less than 1/3 squadron size (rounded down)</li>
         </ul>
         </li>
         <li><u>Deploying Small Craft:</u> 
             <ul>
-                <li>For each ship with a Hangar upgrade, declare how many squadrons that ship will launch during the Order Phase. Mark those Hangar upgrades as "empty"</li>
-                <li>At each point during its movement when a ship launching small craft would apply half of its course change (beginning of its movement, and halfway through) place half of the Small Craft squadrons being deployed this turn within 2 inches of the ship's position at that point in the movement. (Round down for the first turn, round up for the second).</li>
+                <li>During the order phase, note which ships will be launching small craft. At the beginning of the Weapons phase, Those ships may launch any of their squadrons. Mark those Hangar upgrades as "empty". Launched squadrons are considered deployed until they dock.</li>
             </ul>
         </li>
-        <li><u>Using Small Craft:</u> 
+        <li><u>Using and Interacting with Small Craft:</u> 
             <ul>
-                <li><u>Activation:</u> Any time a player could activate a ship during the Weapons Phase, that player may instead choose to activate a Small Craft Squadron. During that activation, the player may move that squadron up to it's speed, attack with that Squadron's Small Craft Weapon, and/or take any other actions available to that Squadron (Perhaps from a Special Hangar Upgrade)</li>
-                <li><u>Making and Attack:</u> Any time during it's Activation, a Squadron may attack with it's Small Craft Weapons at any targets within 2" of the Squadron. To make the attack, roll a number fo d6's equal to the current squadron size. For each die with a result equal to or greater than the accuracy profile corresponding to the type of target being attacked, deal damage to the target equal to the damage profile of the Squadron.</li>
-                <li><ul><li>If the target is a Ship with Point Defense upgrades, those upgrades may retaliate. When the attack is declared from the Squadron, but before the rolls are made, all Point Defense upgrades on the target ship and all Point Defense upgrades on other ships who's range's include the target ship activate. Those point defenses roll their associated dice, and deal damage to the attacking squadron equal to the number rolled. Then the attack proceeds as normal using the new squadron size.</li></ul></li>
-                <li><u>Docking:</u> If a Small Craft is within 2" of a Ship with an empty Hangar upgrade during it's activation, that Squadron may to dock with that ship. Remove the Squadron from the Field, note the type of Squadron that docked on the Ship Sheet for the docking Ship. No need to note the Squadron Size as relaunched squadrons are launched at maximum Squadron Size.</li>
-                <li><u>Taking Damage:</u> If a Squadron is dealt damage, reduce it's Squadron Size by the damage dealt. A Squadron is destroyed if it's current Squadron Size is reduced to zero.</li>
-                <li><u>Being Destroyed:</u> When a Squadron is destroyed, remove it from the board.</li>
+                <li>At the beginning of the weapons phase, before any ships are activated and starting with the player who has the initiative, players alternate giving orders to each of their deployed squadrons.</li>
+                <li>Squadrons can only be given new orders if they are within 36" of a ship with a Hanger upgrade. Squadrons that have not been given new orders maintain their old orders.</li>
+                <li>To give an order to a squadron, choose a ship to assign the squadron to, then choose either Offensive mode, Defensive mode, or Dock.</li>
+                <ul>
+                    <li>In Offensive mode: Squadrons have the effects described in their Effect Ladder based on their current squadron size. If the effect is not a static one and requires timing (for example, "deal 1 damage") that effect happens at the end of the activation of the ship that squadron was assigned to.</li>
+                    <li>In Defensive mode: Squadrons are "escorting" the chosen ship, and act as a deterrent to other squadrons that may attack. Unless otherwise stated, those squadrons have no effect until an enemy squadron is assigned to the same ship that the defending squadron is assigned to. In such a case, a Dogfight begins. More details on Dogfighting can be found below.</li>
+                    <li>Docking: To be given a dock order, the assigned ship must have an empty Hanger upgrade. Mark an empty hanger upgrade on the assigned ship with the type of squadron being docked. The squadron size need not be noted, relaunched Small Craft Squadrons are always launched at full strength (full squadron size).</li>
+                </ul>
+                <li>Some upgrades and other parts of the rules reference "Making an attack against" a small craft squadron. <b>To make an attack against a squadron, roll a d6. If the result is greater than or equal to the toughness of the defending squadron, reduce it's squadron size by 1.</b></li>
             </ul>
         </li>
-        <li><u>Notes on Small Craft vs. Capital Ships:</u> 
+        <li><u>Dogfighting:</u>
             <ul>
-                <li>Capital Ship weapons fired at small craft follow the exact same rules as they would for firing at another Ship, but the damage characteristic is always 1.</li>
-                <li>Small Craft cannot capture objectives, or deny an opponent from capturing an objective, by being within 3" of that objective.</li>
+                <li>If a squadron is assigned to a ship, and there are also any enemy squadrons assigned to that ship, a Dogfight occurs over that ship. A dogfight ends when all squadrons assigned to the ship are one allied with each other (usually by being controlled by the same player).</li>
+                <li>In a Dogfight, no effects from the Effect Ladder of any squadrons Dogfighting over a ship have any effect.</li>
+                <li>Additionally, at the end of the assigned ship's Activation, for each squadron in the Dogfight, choose one other squadron in the Dogfight. Then make a number of attacks against the chosen squadron equal to the Squadron Size of the attack squadron. Resolve for each squadron simultaneously.</li>
             </ul>
         </li>
 
@@ -383,26 +388,26 @@
             <tr>
                 <td><b>Squadron Name</b></td>
                 <td><b>Squadron Size</b></td>
-                <td><b>Speed</b></td>
-                <td><b>Damage</b></td>
-                <td><b>vs. Small Craft</b></td>
-                <td><b>vs. Capital Ships</b></td>
+                <td><b>Toughness</b></td>
+                <td><b>Effect Ladder Full Strength (3/3 to 2/3)</b></td>
+                <td><b>Effect Ladder Half Strength (2/3 to 1/3)</b></td>
+                <td><b>Effect Ladder Low Strength (1/3 to 0/3)</b></td>
             </tr>
             <tr>
                 <td>Fighter</td>
                 <td>8</td>
-                <td>12"</td>
-                <td>1</td>
-                <td>2+</td>
-                <td>6+</td>
+                <td>3</td>
+                <td>Deal 2 Damage (8-6 Squad Size)</td>
+                <td>Deal 1 Damage (5-3 Squad Size)</td>
+                <td>Deal 1 Damage (2-1 Squad Size)</td>
             </tr>
             <tr>
                 <td>Bomber</td>
+                <td>5</td>
                 <td>4</td>
-                <td>8"</td>
-                <td>3</td>
-                <td>6+</td>
-                <td>2+</td>
+                <td>Deal 2 Damage (5-4 Squad Size)</td>
+                <td>Deal 1 Damage (3-2 Squad Size)</td>
+                <td>Deal 1 Damage (1 Squad Size)</td>
             </tr>
         </table></p>
     </ul>
@@ -427,29 +432,27 @@
             <tr>
                 <td>Advanced Target Tracking</td>
                 <td>
-                    <p>You may reroll the accuracy roll for any missiles fired from this ship that miss.</p>
-                    <p>Each instance of this upgrade allows an additional reroll.</p>
+                    <p>For each Missile weapon attack, you may reroll one attack die.</p>
+                    <p>Each instance of this upgrade allows an additional reroll per attack.</p>
                 </td>
             </tr>
             <tr>
                 <td>Away Crews</td>
                 <td>
-                    <p>At any point during this ship's activation, to this ship or any ship within 12", restore 1d6 IP or restore one system</p>
+                    <p>At any point during this ship's activation, restore 1d6 Integrity Points or restore one system to this ship or any ship within 12".</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Ceramic Lining</td>
+                <td>
+                    <p>Increase the mounted ship's Defense rating against Energy weapons and Ballistic weapons by 1 each.</p>
                 </td>
             </tr>
             <tr>
                 <td>Cloaking System</td>
                 <td>
-                    <p>When this ship is being targetted by an attack from a Direct Fire weapon, the attacker gets -X to the roll when rolling to hit where X is the Range Band number this ship is in for that weapon minus 1. (-0 at RB 1, -1 at RB 2, -2 and RB 3, etc.)</p>
-                    <p>When this ship is being targetted by a missile attack, subtract 1 from the accuracy rolls to fire at this ship.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Dazzler</td>
-                <td>
-                    <p>Point Defense</p>
-                    <p>Damage: 2d3</p>
-                    <p>Range: 4"</p>
+                    <p>Weapons fired at this ship roll attack dice as if this ship was in a band adjacent to their stated one.</p>
+                    <p>If this ship is already in a band adjacent to the weapon's stated one, instead this ship cannot be targeted.</p>
                 </td>
             </tr>
             <tr>
@@ -469,7 +472,8 @@
             <tr>
                 <td>Fragmenting Ammunition</td>
                 <td>
-                    <p>+1 the die roll during the "Roll for Additional Critical Hits" step for Direct Fire weapons.</p>
+                    <p>For each instance of fragmenting ammunition mounted, reduce the value on the attack die needed to destroy a system when using ballistic weapons.</p>
+                    <p><i>(For example: If one instance of Fragmenting Ammunition is mounted, each result of 5 or 6 on an attack die destroys a system. If two are mounted, a result of 4, 5, or 6 destroys a system, etc.)</i></p>
                 </td>
             </tr>
             <tr>
@@ -479,23 +483,21 @@
                 </td>
             </tr>
             <tr>
-                <td>Efficient Hangars</td>
+                <td>Illuminator</td>
                 <td>
-                    <p>All Hangar upgrades on this Ship can hold one additional Squadron.</p>
+                    <p>Add 1 to the die roll for all attacks from all sources within 12" of the mounted ship against enemy small craft.</p>
                 </td>
             </tr>
             <tr>
-                <td>Nanite Repair Swarm</td>
+                <td>Layered Plate</td>
                 <td>
-                    <p>Whenever an Allied Small Craft squadron within 8" of this ship takes damage, for each point of damage taken, roll 1d6. For each result of 5+, ignore that damage.</p>
+                    <p>Increase the mounted ship's Defense rating against Ballistic weapons and Missile weapons by 1 each.</p>
                 </td>
             </tr>
             <tr>
-                <td>Prophet PD</td>
+                <td>Plague PD</td>
                 <td>
-                    <p>Point Defense</p>
-                    <p>Damage: 1d3</p>
-                    <p>Range: 9"</p>
+                    <p>At the beginning of this ship's activation, choose any number of small craft squadrons assigned to ships within 12" of this ship. Reduce each of their squadron sizes by 1.</p>
                 </td>
             </tr>
             <tr>
@@ -511,17 +513,16 @@
                 </td>
             </tr>
             <tr>
+                <td>Refraction Array</td>
+                <td>
+                    <p>Increase the mounted ship's Defense rating against Missile weapons and Energy weapons by 1 each.</p>
+                </td>
+            </tr>
+            <tr>
                 <td>Repair Crews</td>
                 <td>
                     <p>At the end of this ship's activation, restore 1d6 + 3 integrity to this ship. For each integrity bar this repair fills, also restore one system.</p>
                     <p>Instead of resotring integrity points, you may instead choose to restore two destroyed systems.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Reserve Units</td>
-                <td>
-                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
-                    <p>Squadrons launched from this Hangar launch with 3 additional Squadron Size. (This does not increase their Starting Squadron Size value.)</p>
                 </td>
             </tr>
             <tr>
@@ -531,18 +532,16 @@
                 </td>
             </tr>
             <tr>
-                <td>Spitfire CIWS</td>
+                <td>Stonewall Flak</td>
                 <td>
-                    <p>Point Defense</p>
-                    <p>Damage: 3d3</p>
-                    <p>Range: 1"</p>
+                    <p>At the beginning of this ship's activation, for each enemy small craft squadron assigned to this ship, make an number of attacks against that squadron equal to its squadron size.</p>
                 </td>
             </tr>
             <tr>
                 <td>Target Acquisition Gear</td>
                 <td>
                     <p>At the beginning of the Weapons Phase, choose a ship within line of sight of this ship.</p>
-                    <p>That ship can have missile weapons fired at it without requiring line of sight until the end of the Weapons Phase of the next turn.</p>
+                    <p>That ship can have missile weapons fired at it without requiring line of sight until the end of the Weapons Phase of this turn.</p>
                 </td>
             </tr>
             <tr>
@@ -555,7 +554,15 @@
             <tr>
                 <td>Tuned Fire Control</td>
                 <td>
-                    <p>+1 to hit with all direct fire weapons. (Weapons fired within RB 1 are guaranteed hits)</p>
+                    <p>Must be assigned to a weapon when mounted.</p>
+                    <p>Allows assigned weapon to fire in the two arcs adjacent to it's firing arc, in addition to it's assigned arc.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuned Capacitors</td>
+                <td>
+                    <p>For each Energy weapon attack, you may reroll one attack die.</p>
+                    <p>Each instance of this upgrade allows an additional reroll per attack.</p>
                 </td>
             </tr>
             <tr>
@@ -573,6 +580,16 @@
     <hr style="border-top: 1px solid; opacity: 0.3">
 
     <h3 id="changelog"><u>Changelog</u></h3>
+    <h4>July 25, 2024</h4>
+    <ul>
+        <li>HUGE UPDATE!!</li>
+        <li>The movement system remains completely untouched, but just about everything to do with combat damage has been changed.</li>
+        <li>Weapons now work the same and roll straight dice for damage. Most upgrades manipulate the dice through changeing the number of them rolled, rerolling them, or ignoring them after being rolled. All new weapon information is confined to the "Weapons" section, and reading that should easily familiarize you with all the new mechanics.</li>
+        <li>Small Craft have also completely changed. Instead of being physicla units that move about the board, they now act like something closer to status effects assigned to a ship.</li>
+        <li>Defenses have been added as another part of force creation. Each ship can equip 3 defenses as part of their kitting out process, each one tailored to defending against a different type of weapon. (Oh yeah, weapon types matter now).</li>
+        <li>Lots of new upgrades, and a number of old upgrades have been changed to work with new existing mechanics. Be sure to check through upgrades before just slamming them on your ship, many work differently than before, Cloaking System being a notable one.</li>
+        <li>Point Defense is much simpler now. Point Defense as a upgrade label is gone now, and any upgrades that interact with Small Craft or Missiles will specifically mention them in their effects, and generic point defenses for small craft are an option for equippable Defenses (previously mentioned).</li>
+    </ul>
     <h4>May 22, 2024</h4>
     <ul>
         <li>Added Measure Tool Download Link</li>
