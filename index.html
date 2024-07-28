@@ -49,6 +49,11 @@
         <li><a href="#smallcraft">Small Craft</a></li>
         <ul><li><a href="#mtable">Default Squadrons</a></li></ul>
         <li><a href="#upgrades">Upgrades</a></li>
+        <ul><li><a href="#dupgrades">Defensive Upgrades</a></li>
+        <li><a href="#oupgrades">Offensive Upgrades</a></li>
+        <li><a href="#mupgrades">Movement Upgrades</a></li>
+        <li><a href="#supgrades">Support Upgrades</a></li>
+        <li><a href="#hupgrades">Hanger Upgrades</a></li></ul>
         <li><a href="#changelog">Changelog</a></li>
     </ol>
 
@@ -417,8 +422,10 @@
     <hr style="border-top: 1px solid; opacity: 0.3">
 
     <h3 id="upgrades"><u>Upgrades</u></h3>
+
     <ul>
-        <table>
+        <h4><u>Defensive Upgrades</u></h4>
+        <table id="dupgrades">
             <tr>
                 <td><b>Upgrade Name</b></td>
                 <td><b>Rules Text</b></td>
@@ -427,19 +434,6 @@
                 <td>Adaptive Plating</td>
                 <td>
                     <p>When this ship takes damage, for each point of damage taken, roll a d6. Ignore one point of damage for each 5+ on those dice.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Advanced Target Tracking</td>
-                <td>
-                    <p>For each Missile weapon attack, you may reroll one attack die.</p>
-                    <p>Each instance of this upgrade allows an additional reroll per attack.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Away Crews</td>
-                <td>
-                    <p>At any point during this ship's activation, restore 1d6 Integrity Points or restore one system to this ship or any ship within 12".</p>
                 </td>
             </tr>
             <tr>
@@ -456,60 +450,15 @@
                 </td>
             </tr>
             <tr>
-                <td>Fabricator</td>
-                <td>
-                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
-                    <p>When a squadron is destroyed, for each Fabricator on each ship, roll 1d6. The Fabricator with the highest result (you get to choose between ties) becomes occupied with a squadron of any type the Fabricator could have contained at the beginning of the game.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Flight Deck</td>
-                <td>
-                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
-                    <p>This Hangar Upgrade can hold two squadrons instead of just one. The squadrons need not be of the same type.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Fragmenting Ammunition</td>
-                <td>
-                    <p>For each instance of fragmenting ammunition mounted, reduce the value on the attack die needed to destroy a system when using ballistic weapons.</p>
-                    <p><i>(For example: If one instance of Fragmenting Ammunition is mounted, each result of 5 or 6 on an attack die destroys a system. If two are mounted, a result of 4, 5, or 6 destroys a system, etc.)</i></p>
-                </td>
-            </tr>
-            <tr>
-                <td>Front-Loaded Vectoring</td>
-                <td>
-                    <p>When applying course change, you may instead apply half of the total course change rounded up during the first instance of applying course change during movement, and apply half the total course change rounded down during the second.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Illuminator</td>
-                <td>
-                    <p>Add 1 to the die roll for all attacks from all sources within 12" of the mounted ship against enemy small craft.</p>
-                </td>
-            </tr>
-            <tr>
                 <td>Layered Plate</td>
                 <td>
                     <p>Increase the mounted ship's Defense rating against Ballistic weapons and Missile weapons by 1 each.</p>
                 </td>
             </tr>
             <tr>
-                <td>Plague PD</td>
-                <td>
-                    <p>At the beginning of this ship's activation, choose any number of small craft squadrons assigned to ships within 12" of this ship. Reduce each of their squadron sizes by 1.</p>
-                </td>
-            </tr>
-            <tr>
                 <td>Reinforced Armor</td>
                 <td>
                     <p>Each Integrity bar for this ship has an additional 2 pips.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Redirected Exhaust</td>
-                <td>
-                    <p>One additional thrust may be used to change course when allocating thrust during movement.</p>
                 </td>
             </tr>
             <tr>
@@ -537,31 +486,32 @@
                     <p>At the beginning of this ship's activation, for each enemy small craft squadron assigned to this ship, make an number of attacks against that squadron equal to its squadron size.</p>
                 </td>
             </tr>
+        </table>
+
+        <h4><u>Defensive Upgrades</u></h4>
+        <table id="oupgrades">
             <tr>
-                <td>Target Acquisition Gear</td>
+                <td><b>Upgrade Name</b></td>
+                <td><b>Rules Text</b></td>
+            </tr>
+            <tr>
+                <td>Advanced Target Tracking</td>
                 <td>
-                    <p>At the beginning of the Weapons Phase, choose a ship within line of sight of this ship.</p>
-                    <p>That ship can have missile weapons fired at it without requiring line of sight until the end of the Weapons Phase of this turn.</p>
+                    <p>For each Missile weapon attack, you may reroll one attack die.</p>
+                    <p>Each instance of this upgrade allows an additional reroll per attack.</p>
                 </td>
             </tr>
             <tr>
-                <td>Thruster Overchargers</td>
+                <td>Fragmenting Ammunition</td>
                 <td>
-                    <p>You may increase your available thrust on an activation to up to twice it's original value.</p>
-                    <p>If you do, Reduce your available thrust next activation by the amount you increased it by.</p>
+                    <p>For each instance of fragmenting ammunition mounted, reduce the value on the attack die needed to destroy a system when using ballistic weapons.</p>
+                    <p><i>(For example: If one instance of Fragmenting Ammunition is mounted, each result of 5 or 6 on an attack die destroys a system. If two are mounted, a result of 4, 5, or 6 destroys a system, etc.)</i></p>
                 </td>
             </tr>
             <tr>
                 <td>Tuned Fire Control</td>
                 <td>
-                    <p>Must be assigned to a weapon when mounted.</p>
-                    <p>Allows assigned weapon to fire in the two arcs adjacent to it's firing arc, in addition to it's assigned arc.</p>
-                </td>
-            </tr>
-            <tr>
-                <td>Tuned Capacitors</td>
-                <td>
-                    <p>For each Energy weapon attack, you may reroll one attack die.</p>
+                    <p>For each Ballistic weapon attack, you may reroll one attack die.</p>
                     <p>Each instance of this upgrade allows an additional reroll per attack.</p>
                 </td>
             </tr>
@@ -572,6 +522,95 @@
                     <p>Allows assigned weapon to fire in the two arcs adjacent to it's firing arc, in addition to it's assigned arc.</p>
                 </td>
             </tr>
+            <tr>
+                <td>Upgraded Capacitors</td>
+                <td>
+                    <p>For each Energy weapon attack, you may reroll one attack die.</p>
+                    <p>Each instance of this upgrade allows an additional reroll per attack.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h4><u>Movement Upgrades</u></h4>
+        <table id="mupgrades">
+            <tr>
+                <td><b>Upgrade Name</b></td>
+                <td><b>Rules Text</b></td>
+            </tr>
+            <tr>
+                <td>Front-Loaded Vectoring</td>
+                <td>
+                    <p>When applying course change, you may instead apply half of the total course change rounded up during the first instance of applying course change during movement, and apply half the total course change rounded down during the second.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Redirected Exhaust</td>
+                <td>
+                    <p>One additional thrust may be used to change course when allocating thrust during movement.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Thruster Overchargers</td>
+                <td>
+                    <p>You may increase your available thrust on an activation to up to twice it's original value.</p>
+                    <p>If you do, Reduce your available thrust next activation by the amount you increased it by.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h4><u>Support Upgrades</u></h4>
+        <table id="supgrades">
+            <tr>
+                <td><b>Upgrade Name</b></td>
+                <td><b>Rules Text</b></td>
+            </tr>
+            <tr>
+                <td>Away Crews</td>
+                <td>
+                    <p>At any point during this ship's activation, restore 1d6 Integrity Points or restore one system to this ship or any ship within 12".</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Illuminator</td>
+                <td>
+                    <p>Add 1 to the die roll for all attacks from all sources within 12" of the mounted ship against enemy small craft.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Plague PD</td>
+                <td>
+                    <p>At the beginning of this ship's activation, choose any number of small craft squadrons assigned to ships within 12" of this ship. Reduce each of their squadron sizes by 1.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Target Acquisition Gear</td>
+                <td>
+                    <p>At the beginning of the Weapons Phase, choose a ship within line of sight of this ship.</p>
+                    <p>That ship can have missile weapons fired at it without requiring line of sight until the end of the Weapons Phase of this turn.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h4><u>Hangar Upgrades</u></h4>
+        <table id="hupgrades">
+            <tr>
+                <td><b>Upgrade Name</b></td>
+                <td><b>Rules Text</b></td>
+            </tr>
+            <tr>
+                <td>Fabricator</td>
+                <td>
+                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
+                    <p>When a squadron is destroyed, for each Fabricator on each ship, roll 1d6. The Fabricator with the highest result (you get to choose between ties) becomes occupied with a squadron of any type the Fabricator could have contained at the beginning of the game.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Flight Deck</td>
+                <td>
+                    <p>Hangar <i>(When installed, note the type Squadron held within)</i></p>
+                    <p>This Hangar Upgrade can hold two squadrons instead of just one. The squadrons need not be of the same type.</p>
+                </td>
+            </tr>
         </table>
     </ul>
     <a href="#title"><u>^Jump to Top^</u></a>
@@ -580,6 +619,10 @@
     <hr style="border-top: 1px solid; opacity: 0.3">
 
     <h3 id="changelog"><u>Changelog</u></h3>
+    <h4>July 28, 2024</h4>
+    <ul>
+        <li>Organized All Upgrades into their own seperate tables.</li>
+    </ul>
     <h4>July 25, 2024</h4>
     <ul>
         <li>HUGE UPDATE!!</li>
