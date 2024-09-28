@@ -1,0 +1,74 @@
+ships
+- ship_id (Int) (PK)
+- ship_name (String)
+- hull (Int) (the number here is it's Integrity Value)
+- defense_e (Int)
+- defense_b (Int)
+- defense_m (Int)
+
+ship_upgrades (Weak Table)
+- ship_id (Int) (FK: ships.ship_id)
+- upgrade_id (Int) (FK: upgrade_list.ship_upgrades)
+
+upgrade_list
+- upgrade_id (PK)
+- upgrade_name (PK)
+
+
+
+
+CREATE TABLE ships (
+	ship_id INTEGER PRIMARY KEY,
+	ship_name TEXT NOT NULL UNIQUE,
+	hull INTEGER NOT NULL,
+	defense_e INTEGER NOT NULL,
+	defense_b INTEGER NOT NULL,
+	defense_m INTEGER NOT NULL
+);
+
+CREATE TABLE upgrade_list (
+	upgrade_id INTEGER UNIQUE,
+	upgrade_name TEXT UNIQUE,
+	PRIMARY KEY (upgrade_id, upgrade_name)
+);
+
+CREATE TABLE ship_upgrades (
+	ship_id INTEGER,
+	upgrade_id INTEGER,
+	FOREIGN KEY (ship_id)
+		REFERENCES ships (ship_id),
+	FOREIGN KEY (upgrade_id)
+		REFERENCES upgrade_list (upgrade_id)
+);
+
+Defensive: 1XX
+Offensive: 2XX
+Movement:  3XX
+Suppport:  4XX
+Hanger:    5XX
+
+INSERT INTO upgrade_list (upgrade_id, upgrade_name)
+VALUES
+	(101, 'Adapative Plate'),
+	(102, 'Ceramic Lining'),
+	(103, 'Cloaking System'),
+	(104, 'Layered Plate'),
+	(105, 'Reinforced Armor'),
+	(106, 'Refraction Array'),
+	(107, 'Repair Crews'),
+	(108, 'Shields'),
+	(109, 'Stonewall Flak'),
+	(201, 'Advanced Target Tracking'),
+	(202, 'Fragmenting Ammunition'),
+	(203, 'Tuned Fire Control'),
+	(204, 'Turret Mount'),
+	(205, 'Upgraded Capacitors'),
+	(301, 'Front-Loaded Vectoring'),
+	(302, 'Redirected Exhaust'),
+	(303, 'Thruster Overchargers'),
+	(401, 'Away Crews'),
+	(402, 'Illuminator'),
+	(403, 'Plague PD'),
+	(404, 'Target Acquisition Gear'),
+	(501, 'Fabricator'),
+	(502, 'Flight Deck');
